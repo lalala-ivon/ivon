@@ -1,0 +1,232 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+$font-list: 12px 14px 18px 20px 22px 24px 28px 38px 16px;
+$base-font-size: nth($font-list, 2);
+$base-line-height: 10px;
+$rhythm-unit: 'px';
+
+$mainWidth:960px;
+$darkColor:#000;
+$lightColor:#FFF;
+$ygColor:#c8e02a;
+$pinkColor:#d40c52;
+$redColor:#dc3b31;
+
+// $susy: ( columns:24, math:fluid, gutters:1/3, gutter-position:split, debug: (image: show));
+// $gutter: 10px;
+$susy: ( columns:24, math:fluid, gutters:1, gutter-position:split);
+$gutter:20px;
+
+
+
+%indent {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+%decoration {
+    display: block;
+    text-decoration: none;
+}
+%block {
+    @include container();
+    max-width: $mainWidth;
+}
+%vertical-outer {
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+        content: "";
+        visibility: hidden;
+    }
+}
+%vertical-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%inline-outer {
+  letter-spacing: -4px; //可能需要微調
+  // word-spacing: -4px;
+  font-size: 0;
+}
+%inline-inner {
+  letter-spacing: normal; //可能需要微調
+  // word-spacing: normal;
+  display:inline-block;
+  *display: inline;
+  zoom:1;
+}
+%clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin image-block($path, $cache:false) {
+    @extend %indent;
+    background-image: image-url($path,false,$cache);
+    width: image-width($path);
+    height: image-height($path);
+    background-repeat: no-repeat;
+}
+
+
+//===== PC版 =====
+.anchor {
+  ul {
+    background:url(../images/anchorBg.png) repeat;
+    padding: 0 rhythm(2);
+    @include box-sizing(border-box); 
+    @extend %inline-outer;
+  }
+  li {
+    display: inline-block;
+    line-height: rhythm(3.5);
+    @extend %inline-inner;
+    a {
+      display: inline-block;
+      line-height: 36px;
+      // vertical-align: top;
+      text-decoration: none;
+      &:after {
+        content: "|";
+        display: inline;
+        @include adjust-font-size-to(nth($font-list, 1), 2);
+        color: $ygColor;
+        padding-left: rhythm(.5);
+      }
+      &:hover {
+        background-color: $ygColor;
+        span, strong {
+          color: #222;
+        }
+      }
+    }
+    span{
+      @include adjust-font-size-to(nth($font-list, 1), 2);
+      color: #aaa;
+      padding:0 rhythm(.5);
+    }
+    strong{
+      @include adjust-font-size-to(nth($font-list, 4), 2);
+      color: $ygColor;
+    }
+  }
+}
+.th_intro {
+  background-color: rgba(255, 255, 255, .7);
+  @extend %clear;
+}
+.md_intro{
+  @include span(24 nest);
+  margin-bottom: rhythm(2);
+  header {
+    margin-bottom: rhythm(.5);
+    @include span(24);
+    @include adjust-font-size-to(nth($font-list, 3), 2);
+    strong {
+      @include adjust-font-size-to(nth($font-list, 6), 3);
+      font-weight: bolder;
+    }
+  }
+  figure {
+    @include span(11 of 24);
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.intro_CT {
+  text-decoration: none;
+  @include span(13 of 24);
+  @include box-sizing(border-box);
+  border: 1px solid $ygColor;
+  border-bottom-width: 4px;
+  border-right-width: 25px;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: rhythm(.5);
+  position: relative;
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    @include border-radius(2px);
+    background-color: #fff;
+    position: absolute;
+    right: -22px;
+    z-index: 2;
+  }
+  &:before {
+    @include rotate(45deg);
+    top: 48px;
+  }
+  &:after {
+    @include rotate(-45deg);
+    top: 60px;
+  }
+  h3 {
+    @include adjust-font-size-to(nth($font-list, 9), 2);
+  }
+  p {
+    @include adjust-font-size-to(nth($font-list, 2), 2);
+    color: $pinkColor;
+  }
+  footer {
+    margin-top: rhythm(.5);
+    border-top: 1px dashed #d2d2d2;
+    text-align: right;
+    @include adjust-font-size-to(nth($font-list, 1));
+    color: #333;
+    strong {
+      @include adjust-font-size-to(nth($font-list, 6));
+      color: $redColor;
+      font-weight: bolder;
+    }
+  }
+}
+
+
+//===== RWD變版 =====
+
+//非 IE8 專用
+@include breakpoint(0px) {
+  html, body {
+    min-width: 320px
+  }
+}
+//Pad 專用
+@include breakpoint(max-width 980px) {
+  .md_intro {
+    header {
+      text-align: center;
+    }
+    figure {
+      margin-bottom: rhythm(.5);
+      @include span(24);
+      text-align: center;
+      img {
+        display: inline;
+      }
+      figcaption {
+        text-align: left;
+      }
+    }
+  }
+  .intro_CT {
+    @include span(24);
+  }
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+
+}

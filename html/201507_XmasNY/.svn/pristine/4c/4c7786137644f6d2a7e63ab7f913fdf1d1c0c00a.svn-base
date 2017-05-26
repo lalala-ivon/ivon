@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>2015連休攻略</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+        
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="header_content header_tour">
+                <h1><a href="#" title="2015連休攻略"><img src="images/headerTour.png"></a></h1>
+                <a href="#" class="menu"><span>menu</span></a>
+                <div class="nav">
+                    <ul class="firstNav">
+                    <!-- 有第二個選單要加on -->
+                         <li class="on"><a href="#">國外團體</a>
+                            <ul class="secNav">
+                                <li><a href="#">日本</a>
+                                    <ul class="thirdNav">
+                                        <li><a href="#">北海道</a></li>
+                                        <li><a href="#">東京</a></li>
+                                        <li><a href="#">關西</a></li>
+                                        <li><a href="#">九州</a></li>
+                                        <li><a href="#">北陸</a></li>
+                                        <li><a href="#">沖繩</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">韓國</a>
+                                    <ul class="thirdNav">
+                                        <li><a href="#">首爾</a></li>
+                                        <li><a href="#">釜山</a></li>
+                                        <li><a href="#">濟州</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">東南亞</a></li>
+                                <li><a href="#">大陸</a></li>
+                                <li><a href="#">關島帛琉</a></li>
+                                <li><a href="#">歐洲</a></li>
+                                <li><a href="#">亞非</a></li>
+                                <li><a href="#">美加</a></li>
+                                <li><a href="#">紐奧</a></li>
+                                <li><a href="#">中南美洲</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">世界主題</a></li>
+                        <li><a href="#">雄獅自由行</a></li>
+                        <li><a href="#">航空自由行</a></li>
+                        <li><a href="#">機票</a></li>
+                        <li><a href="#">訂房</a></li>
+                        <li><a href="#">票劵</a></li>
+                        <li><a href="#">國內旅遊</a></li>
+                        <li><a href="#">台中出發</a></li>
+                        <li><a href="#">高雄出發</a></li>
+                        <li class="bt_newyear"><a href="#">跨年大集合</a></li>
+                    </ul>
+                </div>
+                <a href="#" id="topBt">TOP</a>
+            </div>
+        </div>
+        <div id="main" class="fixmain">
+            <div class="md_main">
+                <div class="main">
+                    <!-- banner -->
+                    <div class="setBanner">
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <a href="#">
+                                    <img src="http://fakeimg.pl/850x300/">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend">
+                        <div class="anchorBox">
+                            <a href="#a01" class="on">台灣<img src="images/borrow-.png"></a>
+                            <a href="#a02">日韓<img src="images/borrow-.png"></a>
+                            <a href="#a03">東南亞<img src="images/borrow-.png"></a>
+                            <a href="#a04">大陸<img src="images/borrow-.png"></a>
+                            <a href="#a05">美加<img src="images/borrow-.png"></a>
+                            <a href="#a06">紐澳<img src="images/borrow-.png"></a>
+                            <a href="#a07">歐亞非<img src="images/borrow-.png"></a>
+                        </div>
+                        <!-- 行程第一地區開始 -->
+                        <div class="tourBox">
+                            <a id="a01" name="a01"></a>
+                            <div class="Box_header">
+                                <h4>台灣>>
+                                    <a href="#">推薦跨年景點</a>
+                                </h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 行程第二地區開始 -->
+                        <div class="tourBox">
+                            <a id="a02" name="a02"></a>
+                            <div class="Box_header">
+                                <h4>日韓>><a href="#">推薦跨年景點</a></h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 行程第三地區開始 -->
+                        <div class="tourBox">
+                            <a id="a03" name="a03"></a>
+                            <div class="Box_header">
+                                <h4>東南亞>><a href="#">推薦跨年景點</a></h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 行程第四地區開始 -->
+                        <div class="tourBox">
+                            <a id="a04" name="a04"></a>
+                            <div class="Box_header">
+                                <h4>大陸>><a href="#">推薦跨年景點</a></h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 行程第五地區開始 -->
+                        <div class="tourBox">
+                            <a id="a05" name="a05"></a>
+                            <div class="Box_header">
+                                <h4>美加>><a href="#">推薦跨年景點</a></h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 行程第六地區開始 -->
+                        <div class="tourBox">
+                            <a id="a06" name="a06"></a>
+                            <div class="Box_header">
+                                <h4>紐澳>><a href="#">推薦跨年景點</a></h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 行程第七地區開始 -->
+                        <div class="tourBox">
+                            <a id="a07" name="a07"></a>
+                            <div class="Box_header">
+                                <h4>歐亞非>><a href="#">推薦跨年景點</a></h4>
+                            </div>
+                            <div class="BoxWrap">
+                                <div class="Box_Content">
+                                    <div class="tourContent">
+                                        <div class="special_word">
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/200x200/">
+                                            </div>
+                                            <div href="#" class="recoBox">
+                                                <h6>英國 / 歐洲</h6>
+                                                <strong>跨年特色</strong>
+                                                <p>(內文100字)英國倫敦眼的跨年煙火被譽為世界上不容錯過跨年盛會！還有在巴黎享受浪漫的傳說</p>
+                                                <strong>推薦跨年地點</strong>
+                                                <ul>
+                                                    <li>倫敦眼煙火</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                    <li>蘇格蘭節慶</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="give">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_01.png" title="聖誕禮物,訂就送"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="gift.html"><img src="images/give.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dressed">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_02.png" title="趴踢穿搭,吸睛術"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/dressed.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forecast">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_03.png" title="跨年地點,大預測"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/forecast.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_04.png" title="跨年必讀,懶人包"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/view.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/act.js" type="text/javascript"></script>

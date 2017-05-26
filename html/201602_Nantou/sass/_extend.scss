@@ -1,0 +1,181 @@
+%indent {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+%decoration {
+    display: block;
+    text-decoration: none;
+}
+%block {
+    @include container();
+    max-width: $mainWidth;
+}
+%vertical-outer {
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+        content: "";
+        visibility: hidden;
+    }
+}
+%vertical-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%inline-outer {
+  letter-spacing: -4px; //可能需要微調
+  // word-spacing: -4px;
+  font-size: 0;
+}
+%inline-inner {
+  letter-spacing: normal; //可能需要微調
+  // word-spacing: normal;
+  display:inline-block;
+  *display: inline;
+  zoom:1;
+}
+// 省略...
+%da {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//清掉float
+%clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+%word {
+  //@include user-select(none);
+  @include adjust-font-size-to($base-font-size);
+  color: $darkColor;
+  font-family: "Apple LiGothic Medium", "Arial", "Microsoft JhengHei",  "PMingLiU", "sans-serif", "serif";
+  //verdana
+}
+%wordFamily {
+  font-family: "Arial", "Apple LiGothic Medium", "Microsoft JhengHei",  "PMingLiU", "sans-serif", "serif";
+}
+%fontSize10 {
+  font-size: 10px;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  letter-spacing: 1px;
+  display: block;
+  font-family: Arial Unicode MS;
+}
+%fontSize9 {
+  font-size: 9px;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+  letter-spacing: 1px;
+  display: block;
+  font-family: Arial Unicode MS;
+}
+%fontSize11 {
+  font-size: 11px;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  letter-spacing: 1px;
+  display: block;
+  font-family: Arial Unicode MS;
+}
+%triangle {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+}
+
+%h3 {
+  strong {
+    font-size: 24px;
+    color: #595F5F;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    span {
+      font-size: 32px;
+      color: $greenColor;
+      line-height: 42px;
+    }
+  }
+  p {
+    font-size: 26px;
+    line-height: 42px;
+    color: #C1C6C6;
+    font-family: "Times New Roman";
+    float: right;
+  }
+}
+%pageMB {
+  text-align: center;
+  a {
+    display: inline-block;
+    border:1px solid #ccc;
+    padding: 1px 6px;
+    margin: 0 5px 10px;
+    text-decoration: none;
+    vertical-align: bottom;
+    @include box-sizing(border-box);
+    &:hover {
+      background-color: #ddd;
+      font-weight: bolder;
+    }
+  }
+  >a {
+    font-family: 新細明體;
+    color: #999;
+    width: 60px;
+  }
+  >p {
+    display: inline-block;
+    margin: 0 25px ;
+    a {
+      margin-top: 1px;
+      color: #666;
+      font-family: Arial;
+    }
+  }
+  @include breakpoint(max-width 680px) {
+    >a {
+      @include span(12 of 24);
+    }
+    p {
+      @include span(24);
+    }
+    a {
+      padding: 2px 6px;
+    }
+  }
+}
+%Header {
+  border-bottom: 3px solid #CADFAA;
+  padding-bottom: 15px;
+  img {
+    float: left;
+    margin-right: 10px;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #4C6600;
+    padding-top: 7px;
+    @include box-sizing(border-box);
+  }
+}
+%radiusBT {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px;
+  @include border-radius(4px);
+}

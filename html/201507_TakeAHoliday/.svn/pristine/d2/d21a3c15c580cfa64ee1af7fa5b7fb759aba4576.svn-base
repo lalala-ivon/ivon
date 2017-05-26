@@ -1,0 +1,78 @@
+#header { max-width: 100%; margin-left: auto; margin-right: auto; max-width: 960px; }
+#header:after { content: " "; display: block; clear: both; }
+
+.anchor ul { letter-spacing: -4px; font-size: 0; }
+
+.anchor li { letter-spacing: normal; display: inline-block; *display: inline; zoom: 1; }
+
+.th_view:after, .md_view header:after { content: ""; display: block; clear: both; }
+
+#header { padding: 20px 0; }
+
+.header_content { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.header_content img { max-width: 100%; display: inline-block; }
+
+.header_CT { position: relative; width: 64.58333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.header_CT header { width: 91.17647%; float: left; margin-left: 1.47059%; margin-right: 1.47059%; height: 40px; padding-top: 20px; padding-bottom: 10px; text-align: right; }
+.header_CT header img { display: inline; max-width: 100%; }
+.header_CT h2 { padding-left: 30px; }
+.header_CT h2 img { max-width: 100%; }
+
+.foodHeader .header_content { width: 22.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.foodHeader .header_CT { width: 72.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.foodHeader .header_CT h2 { padding-left: 0; text-align: center; }
+.foodHeader .header_CT h2 img { display: inline; }
+
+.anchor ul { background: url(../images/anchorBg.png) repeat; padding: 0 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.anchor li { display: inline-block; line-height: 35px; }
+.anchor li a { display: inline-block; line-height: 36px; text-decoration: none; }
+.anchor li a:after { content: "|"; display: inline; font-size: 12px; line-height: 20px; color: #c8e02a; padding-left: 5px; }
+.anchor li a:hover { background-color: #c8e02a; }
+.anchor li a:hover span, .anchor li a:hover strong { color: #222; }
+.anchor li span { font-size: 12px; line-height: 20px; color: #aaa; padding: 0 5px; }
+.anchor li strong { font-size: 20px; line-height: 20px; color: #c8e02a; }
+
+.th_view { background-color: rgba(255, 255, 255, 0.4); background-color: #95d5f1 \9; padding: 20px; padding-bottom: 0; }
+
+.md_view { background-color: #fff; width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; margin-bottom: 20px; position: relative; }
+.md_view > a { position: absolute; top: -80px; }
+.md_view header { padding: 15px; padding-top: 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.md_view header > div { width: 52.08333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.md_view header figure { width: 43.75%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.md_view header figure img { max-width: 100%; }
+.md_view header h3 { font-size: 18px; line-height: 30px; color: #8da202; }
+.md_view header h3 strong { font-size: 24px; line-height: 30px; color: #8da202; font-weight: bolder; }
+
+.viewLink a { width: 100%; float: left; margin-top: 5px; height: ryhthm(3); }
+.viewLink a p { background-color: #eee; padding: 0 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 83.33333%; float: left; font-size: 16px; line-height: 30px; border: 3px solid #eee; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viewLink a:hover p { border: 3px solid #c8e02a; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.viewLink a footer { width: 16.66667%; float: left; text-align: center; background-color: #c8e02a; font-size: 12px; line-height: 20px; color: #333; border: 3px solid #c8e02a; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.viewLink a footer strong { font-size: 24px; line-height: 30px; color: #dc3b31; font-weight: bolder; }
+
+@media (min-width: 0px) { html, body { min-width: 320px; } }
+@media (max-width: 980px) { .header_content { width: 35.41667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; text-align: right; }
+  .header_content img { display: inline; }
+  .header_CT { width: 60.41667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .viewLink a p { height: 60px; white-space: inherit; width: 75%; float: left; }
+  .viewLink a:hover p { border-color: #eee; }
+  .viewLink a footer { height: 60px; line-height: 70px; width: 25%; float: left; }
+  .foodHeader .header_content { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; padding-left: 40px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .foodHeader .header_CT { width: 64.58333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .foodHeader .header_CT h2 { padding-left: 0; text-align: center; }
+  .foodHeader .header_CT h2 img { display: inline; } }
+@media (max-width: 720px) { .header_content { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; text-align: center; padding: 0; }
+  .header_content img { display: inline; }
+  .header_CT { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .header_CT header { text-align: center; padding: 0; }
+  .header_CT h2 { padding: 0 10px; text-align: center; }
+  .header_CT h2 img { display: inline; max-width: 100%; }
+  .md_view header > div, .md_view header figure { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .md_view header figure { text-align: center; margin-bottom: 10px; }
+  .md_view header figure img { display: inline; }
+  .viewLink a p { width: 100%; float: left; height: auto; }
+  .viewLink a footer { width: 100%; float: left; height: 40px; line-height: 50px; }
+  .anchor { display: none; }
+  .foodHeader .header_content { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; padding-left: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .foodHeader .header_CT { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; } }
+
+/*# sourceMappingURL=view.css.map */

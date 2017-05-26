@@ -1,0 +1,17 @@
+body{
+ padding-top: 35px;
+}
+#lionhead,#lionfooter{
+  *{
+    font-size: 12px !important;
+  }
+}
+
+@include breakpoint(max-width 980px) {
+  body{
+    padding-top: 0 !important;
+  }
+  #lionhead,#lionfooter{
+    display: none;
+  }
+}

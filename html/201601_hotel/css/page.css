@@ -1,0 +1,42 @@
+.picShow *, .picShow *:before, .picShow *:after { font-size: 14px; line-height: 20px; color: #000; font-family: "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif"; }
+
+.picShow { height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; }
+.picShow > ul { height: 100%; }
+.picShow > ul > li { height: 100%; position: relative; }
+.picShow > ul > li > img { width: 100%; }
+
+.afford { width: 358px; height: 100%; padding: 50px 25px 0 70px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.7); position: absolute; top: 60px; right: 0; z-index: 5; }
+.afford h4 { font-size: 18px; font-weight: bolder; color: #fff; margin-bottom: 20px; }
+.afford p { color: #ccc; font-size: 13px; line-height: 25px; }
+.afford span, .afford strong { font-size: 15px; color: #BFFFFF; }
+.afford .booking { font-size: 15px; color: #D86C00; }
+.afford .booking:hover { text-decoration: none; }
+
+.plant { margin-top: 25px; margin-bottom: 25px; }
+.plant strong { display: block; }
+.plant li { font-size: 13px; color: #ccc; line-height: 25px; }
+
+.tip { margin-bottom: 30px; }
+.tip p { color: #FFFFBF; font-size: 13px; }
+
+.open { display: block; width: 48px; height: 57px; position: absolute; top: 50%; right: 310px; z-index: 10; margin-top: -28px; }
+.open:hover { text-decoration: none; }
+
+.picList { position: absolute; left: 157px; bottom: 70px; z-index: 5; }
+.picList li { float: left; }
+.picList li a { display: block; width: 66px; height: 50px; position: relative; }
+.picList li a:before { content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+.picList li a img { width: 100%; }
+.picList li a:hover:before { border: 3px solid #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media (max-width: 1360px) { .picShow > ul > li > img { width: auto; height: 100%; } }
+@media (max-width: 980px) { main { height: 950px; position: relative; }
+  .picShow { height: 930px; }
+  .picShow li img { width: auto; }
+  .afford { top: 50px; }
+  .picList { bottom: 15px; left: 0; width: 100%; }
+  .picList ul { white-space: nowrap; text-align: center; font-size: 0; letter-spacing: 0; }
+  .picList li { display: inline-block; float: none; } }
+@media (max-width: 500px) { .picList li a { width: 50px; height: 37.8px; } }
+
+/*# sourceMappingURL=page.css.map */

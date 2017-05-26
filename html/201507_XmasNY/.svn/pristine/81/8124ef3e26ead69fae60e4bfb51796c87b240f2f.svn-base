@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html { font-size: 93.75%; line-height: 1.33333em; }
+
+.th_derssed, .dressNav { max-width: 100%; margin-left: auto; margin-right: auto; max-width: 960px; }
+.th_derssed:after, .dressNav:after { content: " "; display: block; clear: both; }
+
+.md_dressed.activity ul:after, .firm:after { content: ""; display: block; clear: both; }
+
+.md_dressed.activity .BoxWrap, .md_dressed.star .BoxWrap { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-right: 12px; padding-bottom: 12px; overflow: hidden; margin-bottom: 20px; }
+
+.th_derssed .Box_Content, .dressNav a { position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px solid #000; text-align: left; }
+.th_derssed .Box_Content:before, .dressNav a:before, .th_derssed .Box_Content:after, .dressNav a:after { content: ""; display: block; position: absolute; border: 2px solid #000; display: none\9; }
+.th_derssed .Box_Content:before, .dressNav a:before { width: 100%; height: 10px; top: 100%; left: 4px; -moz-transform: skew(45deg, 0); -ms-transform: skew(45deg, 0); -webkit-transform: skew(45deg, 0); transform: skew(45deg, 0); }
+.th_derssed .Box_Content:after, .dressNav a:after { width: 10px; height: 100%; top: 4px; left: 100%; -moz-transform: skew(0, 45deg); -ms-transform: skew(0, 45deg); -webkit-transform: skew(0, 45deg); transform: skew(0, 45deg); }
+
+.md_dressed.activity ul:after, .firm:after { content: ""; display: block; clear: both; }
+
+html, body { width: 100%; height: 100%; min-width: 320px; min-width: 960px; }
+html *, html *:before, html *:after, body *, body *:before, body *:after { color: #000; font-family: "xingothic-w3", "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif"; }
+
+body { margin: 0; padding: 35px 0 0 0; }
+
+.dressHeader { background: url(../images/dressBg.png) no-repeat; }
+.dressHeader h1:before { vertical-align: middle; }
+
+.th_derssed { margin-top: 20px; }
+.th_derssed .notice { width: 91.66667%; float: left; margin-left: 5.20833%; margin-right: -100%; margin-right: 100%; padding-left: 0; }
+
+.md_dressed.activity .BoxWrap { width: 95.83333%; float: left; float: right; }
+.md_dressed.activity p { margin-bottom: 0; font-size: 28px; line-height: 40px; }
+.md_dressed.activity ul { width: 100%; float: left; float: none; margin-top: 10px; }
+.md_dressed.activity li { width: 22.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; height: 192px; background-color: #e2e2e2; border: 10px solid #fff; border-top-width: 5px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.md_dressed.activity li > header { font-size: 28px; line-height: 40px; background-color: #fff; width: 100%; position: relative; padding-left: 45px; padding-bottom: 5px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-weight: bolder; }
+.md_dressed.activity li > header span { font-size: 40px; color: #fff; background-color: #ef92ae; display: inline-block; padding-left: 10px; position: absolute; top: 0px; left: -15px; }
+.md_dressed.activity li > header span:after { content: ""; display: block; width: 0; height: 0; border-style: solid; border-width: 20px 0 20px 20px; border-color: transparent transparent transparent #ef92ae; position: absolute; right: -20px; top: 0; }
+.md_dressed.activity li > div { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; height: 100%; padding: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 24px; line-height: 40px; line-height: 29px; }
+.md_dressed.activity li > div > span { color: #ff0000; }
+.md_dressed.star .BoxWrap { width: 100%; float: left; }
+.md_dressed.star .Box_Content { width: 100%; float: left; padding-top: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.md_dressed.star .Box_Content > header { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.md_dressed.star .Box_Content > div { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.md_dressed.star h4 { font-size: 24px; line-height: 40px; }
+
+.th_dressCT > header { width: 95.83333%; float: left; margin-left: 2.08333%; margin-right: 2.08333%; }
+.th_dressCT > header h6 { font-size: 24px; line-height: 40px; border-bottom: 1px solid #000; font-weight: bolder; }
+.th_dressCT > header p { font-size: 18px; line-height: 40px; color: #ff0000; text-align: right; font-weight: bolder; }
+.th_dressCT > header p span { font-size: 24px; line-height: 40px; color: #ff0000; font-weight: bolder; }
+.th_dressCT > div { width: 100%; float: left; }
+.th_dressCT > div p { color: #333; }
+.th_dressCT > div h6 { font-size: 18px; line-height: 40px; color: #ea2479; }
+.th_dressCT .sponsorLink { margin-top: 10px; width: 100%; float: left; }
+.th_dressCT .sponsorLink a { width: 29.16667%; float: left; margin-left: 2.08333%; margin-right: 2.08333%; }
+.th_dressCT .sponsorLink.btBuy { background: #00923f; }
+.th_dressCT .sponsorLink.btBuy:after { border-top-color: #0a6318; }
+
+.dressNav { height: 185px; }
+.dressNav ul { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.dressNav li { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.dressNav a { display: inline-block; font-size: 24px; line-height: 70px; font-weight: bold; text-align: center; width: 93.75%; float: left; margin-left: 3.125%; margin-right: 3.125%; text-decoration: none; background-color: #57cff0; }
+.dressNav a:before, .dressNav a:after { background-color: #000; }
+.dressNav a img { display: none; padding-left: 5px; }
+.dressNav a.on { background-color: #ffe400; }
+.dressNav a.on img { display: inline; vertical-align: middle; }
+.dressNav a span { display: block; position: relative; border: 6px solid #fff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: url(../images/point-.png); }
+.dressNav a span:after { content: ""; display: block; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; border: 2px solid #000; }
+
+.firm { width: 100%; float: left; float: none; }
+.firm > header { width: 22.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.firm > header img { max-width: 100%; }
+.firm > div { width: 39.58333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.firm > footer { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+
+@media (max-width: 980px) { .dressHeader { border-bottom: none; position: relative; background-size: cover; box-shadow: none; }
+  .dressHeader h1 { height: 140px; }
+  .dressHeader h1 a img { height: 110px; }
+  .dressNav { height: 60px; }
+  .dressNav a { line-height: 50px; }
+  .dressNav a span { border-width: 3px; }
+  .th_derssed { margin-top: -150px; }
+  .md_dressed.activity li { width: 47.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; margin-bottom: 20px; height: 167px; }
+  .md_dressed.activity p { font-size: 24px; line-height: 40px; }
+  .md_dressed.star .Box_Content > header { width: 100%; float: left; text-align: center; }
+  .md_dressed.star .Box_Content > header img { max-width: 100%; }
+  .md_dressed.star .Box_Content > div { width: 100%; float: left; }
+  .firm > header { width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .firm > header img { max-width: 100%; }
+  .firm > div { width: 64.58333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .firm > footer { margin-top: 20px; width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; } }
+@media (max-width: 720px) { .md_dressed.activity li { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; margin-bottom: 20px; height: auto; }
+  .th_dressCT .sponsorLink a { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .firm > header { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; text-align: center; margin-bottom: 10px; }
+  .firm > div { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .dressNav li { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .dressHeader h1 a img { height: 70px; }
+  .dressNav ul:after { content: ""; display: block; clear: both; }
+  .dressNav li { margin-bottom: 20px; }
+  .dressNav a { line-height: 40px; } }
+@media screen and (min-width: 0px) { html, body { min-width: 320px; } }
+
+/*# sourceMappingURL=dress.css.map */

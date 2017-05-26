@@ -1,0 +1,121 @@
+
+$font-list: 15px 18px 21px 24px 28px 32px 16px;
+$base-font-size: nth($font-list, 1);
+$base-line-height: 20px;
+$rhythm-unit: 'px';
+@include establish-baseline();
+
+$mainWidth:960px;
+$darkColor:#000;
+$whiteColor:#FFF;
+$yellowColor:#ffe400;
+$greenColor:#00923f;
+$grayColor:#f2f2f2;
+$redColor:#ff0000;
+$pinkColor:#ea2479;
+$redOrange:#ff4800;
+
+// $susy: ( columns:24, math:fluid, gutters:1/3, gutter-position:split, debug: (image: show));
+// $gutter: 10px;
+$susy: ( columns:24, math:fluid, gutters:1, gutter-position:split);
+$gutter:20px;
+
+%indent {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+%decoration {
+    display: block;
+    text-decoration: none;
+}
+%block {
+    @include container();
+    max-width: $mainWidth;
+}
+
+%vertical-outer {
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+        content: "";
+        visibility: hidden;
+    }
+}
+%vertical-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+%clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+%Box-outer {
+    @include box-sizing(border-box);
+    padding-right: 12px;
+    padding-bottom: 12px;
+    overflow: hidden;
+    margin-bottom: rhythm(1);
+}
+%Box-inner {
+    position: relative;
+    @include box-sizing(border-box);
+    border:2px solid $darkColor;
+    text-align: left;
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 2px solid $darkColor;
+        display: none\9;
+    }
+    &:before {
+        width: 100%;
+        height: 10px;
+        top: 100%;
+        left: 4px;
+        @include skew(45deg, 0);
+    }
+    &:after {
+        width: 10px;
+        height: 100%;
+        top: 4px;
+        left: 100%;
+        @include skew(0, 45deg);
+    }
+}
+
+%boxShadow {
+    text-decoration: none;
+    text-indent: -10px;
+    position: relative;
+    text-align: center;
+    @include adjust-font-size-to(nth($font-list, 2), 2);
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        @include box-sizing(border-box);
+    }
+}
+
+@mixin image-block($path, $cache:false) {
+    @extend %indent;
+    background-image: image-url($path,false,$cache);
+    width: image-width($path);
+    height: image-height($path);
+    background-repeat: no-repeat;
+}

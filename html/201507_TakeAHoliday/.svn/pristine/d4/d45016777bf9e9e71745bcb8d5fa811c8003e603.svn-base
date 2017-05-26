@@ -1,0 +1,376 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+$font-list: 12px 14px 18px 20px 22px 24px 28px 38px 16px;
+$base-font-size: nth($font-list, 2);
+$base-line-height: 10px;
+$rhythm-unit: 'px';
+
+$mainWidth:960px;
+$darkColor:#000;
+$lightColor:#FFF;
+$ygColor:#c8e02a;
+$pinkColor:#d40c52;
+$redColor:#dc3b31;
+
+// $susy: ( columns:24, math:fluid, gutters:1/3, gutter-position:split, debug: (image: show));
+// $gutter: 10px;
+$susy: ( columns:24, math:fluid, gutters:1, gutter-position:split);
+$gutter:20px;
+
+
+
+%indent {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+%decoration {
+    display: block;
+    text-decoration: none;
+}
+%block {
+    @include container();
+    max-width: $mainWidth;
+}
+%vertical-outer {
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+        content: "";
+        visibility: hidden;
+    }
+}
+%vertical-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%inline-outer {
+  letter-spacing: -4px; //可能需要微調
+  // word-spacing: -4px;
+  font-size: 0;
+}
+%inline-inner {
+  letter-spacing: normal; //可能需要微調
+  // word-spacing: normal;
+  display:inline-block;
+  *display: inline;
+  zoom:1;
+}
+%clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin image-block($path, $cache:false) {
+    @extend %indent;
+    background-image: image-url($path,false,$cache);
+    width: image-width($path);
+    height: image-height($path);
+    background-repeat: no-repeat;
+}
+
+
+//===== PC版 =====
+#header {
+  @extend %block;
+  padding: rhythm(2) 0;
+}
+.header_content{
+  @include span(8 of 24);
+  img {
+    max-width: 100%;
+    display: inline-block;
+  }
+}
+.header_CT {
+  position: relative;
+  @include span(16 of 24);
+  header {
+    @include span(16 of 17);
+    height: rhythm(4);
+    padding-top: rhythm(2);
+    padding-bottom: rhythm(1);
+    text-align: right;
+    img {
+      display: inline;
+      max-width: 100%;
+    }
+  }
+  h2 {
+    padding-left: rhythm(3);
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.foodHeader {
+  .header_content {
+    @include span(6 of 24);
+  }
+  .header_CT {
+    @include span(18 of 24);
+    h2 {
+      padding-left: 0;
+      text-align: center;
+      img {
+        display: inline;
+      }
+    }
+  }
+}
+.anchor {
+  ul {
+    background:url(../images/anchorBg.png) repeat;
+    padding: 0 rhythm(2);
+    @include box-sizing(border-box); 
+    @extend %inline-outer;
+  }
+  li {
+    display: inline-block;
+    line-height: rhythm(3.5);
+    @extend %inline-inner;
+    a {
+      display: inline-block;
+      line-height: 36px;
+      // vertical-align: top;
+      text-decoration: none;
+      &:after {
+        content: "|";
+        display: inline;
+        @include adjust-font-size-to(nth($font-list, 1), 2);
+        color: $ygColor;
+        padding-left: rhythm(.5);
+      }
+      &:hover {
+        background-color: $ygColor;
+        span, strong {
+          color: #222;
+        }
+      }
+    }
+    span{
+      @include adjust-font-size-to(nth($font-list, 1), 2);
+      color: #aaa;
+      padding:0 rhythm(.5);
+    }
+    strong{
+      @include adjust-font-size-to(nth($font-list, 4), 2);
+      color: $ygColor;
+    }
+  }
+}
+
+.th_view {
+  background-color: rgba(255, 255, 255, .4);
+  background-color: #95d5f1 \9;
+  padding: rhythm(2);
+  padding-bottom: 0;
+  @extend %clear;
+}
+.md_view {
+  background-color: #fff;
+  @include span(24);
+  margin-bottom: rhythm(2);
+  position: relative;
+  >a {
+    position: absolute;
+    top: -80px;
+  }
+  header {
+    padding: rhythm(1.5);
+    padding-top: rhythm(2);
+    // margin-bottom: rhythm(1);
+    @include box-sizing(border-box);
+    @extend %clear;
+    >div {
+      @include span(13 of 24);
+    }
+    figure {
+      @include span(11 of 24);
+      img {
+        max-width: 100%;
+      }
+    }
+    h3 {
+      @include adjust-font-size-to(nth($font-list, 3));
+      color: #8da202;
+      strong {
+        @include adjust-font-size-to(nth($font-list, 6), 3);
+        color: #8da202;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+.viewLink {
+  a {
+    @include span(24 nest);
+    margin-top: rhythm(.5);
+    height: ryhthm(3);
+    p {
+      background-color: #eee;
+      padding: 0 rhythm(1);
+      @include box-sizing(border-box);
+      @include span(20 of 24 nest);
+      @include adjust-font-size-to(nth($font-list, 9), 3);
+      border: 3px solid #eee;
+      overflow : hidden;
+      text-overflow : ellipsis;
+      white-space : nowrap;
+    } 
+    &:hover {
+      p {
+        border:3px solid $ygColor;
+        @include box-sizing(border-box);
+      }
+    } 
+    footer {
+      @include span(4 of 24 nest);
+      text-align: center;
+      background-color: $ygColor;
+      @include adjust-font-size-to(nth($font-list, 1));
+      color: #333;
+      border: 3px solid $ygColor;
+      @include box-sizing(border-box);
+      strong {
+        @include adjust-font-size-to(nth($font-list, 6));
+        color: $redColor;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+      
+
+//===== RWD變版 =====
+
+//非 IE8 專用
+@include breakpoint(0px) {
+  html, body {
+    min-width: 320px
+  }
+}
+//Pad 專用
+@include breakpoint(max-width 980px) {
+  .header_content {
+    @include span(9 of 24);
+    text-align: right;
+    img {
+      display: inline;
+    }
+  }
+  .header_CT {
+    @include span (15 of 24);
+  }
+  .viewLink {
+    a {
+      p {
+        height: rhythm(6);
+        white-space: inherit;
+        @include span(18 of 24 nest);
+      }
+      &:hover {
+        p {
+          border-color: #eee;
+        }
+      }
+      footer {
+        height: rhythm(6);
+        line-height: rhythm(7);
+        @include span(6 of 24 nest);
+      }
+    }
+  }
+  .foodHeader {
+    .header_content {
+      @include span(8 of 24);
+      padding-left: rhythm(4);
+      @include box-sizing(border-box);
+    }
+    .header_CT {
+      @include span(16 of 24);
+      h2 {
+        padding-left: 0;
+        text-align: center;
+        img {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+  .header_content {
+    @include span(24);
+    text-align: center;
+    padding: 0;
+    img {
+      display: inline;
+    }
+  }
+  .header_CT {
+    @include span(24);
+    header {
+      text-align: center;
+      padding: 0;
+    }
+    h2 {
+      padding: 0 10px;
+      text-align: center;
+      img {
+        display: inline;
+        max-width: 100%;
+      }
+    }
+  }
+  .md_view {
+    header {
+      >div, figure {
+        @include span(24);
+      }
+      figure {
+        text-align: center;
+        margin-bottom: rhythm(1);
+        img {
+          display: inline;
+        }
+      }
+    }
+  }
+  .viewLink {
+    a {
+      p {
+        @include span(24 nest);
+        height: auto;
+      }
+      footer {
+        @include span(24 nest);
+        height: rhythm(4);
+        line-height: rhythm(5);
+      }
+    }
+  }
+  .anchor {
+    display: none;
+  }
+  .foodHeader {
+    .header_content {
+      @include span(24);
+      padding-left: 0;
+      @include box-sizing(border-box);
+    }
+    .header_CT {
+      @include span(24);
+    }
+  }
+}

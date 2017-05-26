@@ -1,0 +1,696 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+//===== PC版 =====
+.ly_car {
+	@extend %block;
+	>h3 {
+		@extend %h3;
+	}
+}
+.th_car {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	ul {
+		white-space: normal;
+		text-align: center;
+		li {
+			display: inline-block;
+			border:1px solid #98B300;
+			padding: 15px 20px;
+			font-size: 15px;
+			font-weight: bolder;
+			color: #98B300;
+			position: relative;
+			&+li {
+				margin-left: 88px;
+				&:before {
+					content: "";
+					display: block;
+					background: url(../images/share/borrow_A_R.png) no-repeat center;
+					width: 88px;
+					height: 38px;
+					position: absolute;
+					top: 12px;
+					left: -88px;
+				}
+			}
+		}
+		.on {
+			background-color: #98B300;
+			color: $lightColor;
+			span {
+				background-color: $lightColor;
+			}
+		}
+		span {
+			display: inline-block;
+			margin-right: 15px;
+			width: 32px;
+			height: 32px;
+			background-color: #F5F5EB;
+			text-align: center;
+			line-height: 32px;
+			color: #98B300;
+			font-size: 22px;
+			font-family: Arial;
+			@include border-radius(50%);
+		}
+		strong {
+			display: inline-block;
+			float: right;
+			margin-top: 7px;
+		}
+	}
+}
+.th_carPay {
+	padding-bottom: 50px;
+	>header {
+		@extend %Header;
+	}
+	>table {
+		border:1px solid #CADFAA;
+		width: 100%;
+		@include box-sizing(border-box);
+		margin-top: 3px;
+		tr {
+			border-bottom: 1px solid #eee;
+		}
+		h6, p {
+			font-size: 13px;
+			color: #545454;
+			float: left;
+			padding:20px;
+		}
+		h6 {
+			min-width: 100px;
+		}
+		p {
+			display: block;
+			strong {
+				font-family: Arial;
+				font-size: inherit;
+				color: #D86C00;
+				font-weight: bolder;
+			}
+			em {
+				color: #D86C00;
+				
+			}
+		}
+		span {
+			display: block;
+			float: right;
+			margin-right: 20px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			img {
+				float: left;
+				margin-left: 10px;
+			}
+		}
+		label {
+			display: block;
+			float: right;
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			width: 65px;
+			background-color: #F5F5EB;
+		}
+		td.oneColumn {
+			width: 220px;
+		}
+	}
+}
+.th_carPlace {
+	>header {
+		@extend %Header;
+		h4 {
+			float: left;
+			margin-right: 25px;
+		}
+		select {
+			background-color: #000;
+			color: #777;
+			font-size: 13px;
+			padding: 2px 5px;
+		}
+	}
+	>footer {
+		text-align: right;
+		padding-bottom: 20px;
+		@extend %clear;
+		ul {
+			white-space: nowrap;
+			margin-bottom: 25px;
+			@extend %clear;
+		}
+		li {
+			display: inline-block;
+			margin-left: 20px;
+		}
+		.on {
+			a {
+				background-color: #FF0000;
+				color: $lightColor;
+			}
+		}
+		a {
+			@extend %radiusBT;
+			background-color: #ddd;
+		}
+		>a {
+			background-color: #FF0000;
+			color: $lightColor;
+		}
+	}
+}
+.md_carPlace {
+	margin-top: 3px;
+	margin-bottom: 40px;
+	border:1px solid #CADFAA;
+	@extend %clear;
+	>table {
+		width: 100%;
+		thead {
+			border-bottom: 1px solid #CADFAA;
+		}
+		th {
+			font-size: 15px;
+			font-weight: bolder;
+			color: #859233;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+		h3 {
+			font-size: 14px;
+			font-weight: bolder;
+			color: #98B200;
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 20px;
+		}
+		tr {
+			border-bottom: 1px solid #eee;
+		}
+		td {
+			font-size: 13px;
+			color: #555;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			figure {
+				display: inline-block;
+				margin-right: 20px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.number {
+			font-family: Arial;
+			font-size: 15px;
+			color: #555;
+		}
+		.name {
+			text-align: left;
+			padding-right: 30px;
+			padding-left: 30px;
+			width: 40%;
+		}
+		.amount {
+			div {
+				border:1px solid #eee;
+				display: inline-block;
+				height: 28px;
+				line-height: 28px;
+				font-size: 0;
+				a {
+					text-decoration: none;
+					display: inline-block;
+					padding-right: 5px;
+					padding-left: 5px;
+					height: 28px;
+					font-size: 13px;
+					img {
+						display: inline-block;
+						vertical-align: middle;
+						margin-top: -4px;
+					}
+				}
+				span {
+					display: inline-block;
+					border-right: 1px solid #eee;
+					border-left: 1px solid #eee;
+					padding-right: 10px;
+					padding-left: 10px;
+					font-size: 13px;
+				}
+			}
+		}
+
+	}
+}
+.pt_carPlace {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	@extend %clear;
+	>header {
+		float: left;
+		margin-left: 35px;
+		margin-top: 45px;
+		span {
+			display: inline-block;
+			font-size: 14px;
+			color: $lightColor;
+			background-color: #98B200;
+			padding: 2px 5px;
+			margin-right: 10px;
+		}
+		p {
+			display: inline-block;
+			font-size: 13px;
+			strong {
+				font-family: Arial;
+				font-size:inherit;
+				font-weight: bolder;
+				color: #B20000;
+			}
+		}
+	}
+}
+.carPlace {
+	width: 388px;
+	float: right;
+	margin-right: 10px;
+	>footer {
+		border-top: 2px solid #CADFAA;
+		text-align: right;
+		padding-top: 15px;
+		span {
+			font-size: 17px;
+			color: $fontRed;
+			font-weight: bolder;
+		}
+	}
+	li {
+		text-align: right;
+		margin-bottom: 15px;
+	}
+	p {
+		display: inline-block;
+		font-size: 15px;
+		em {
+			font-weight: bolder;
+			color: $fontRed;
+			display: inline-block;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+		strong {
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+	span {
+		font-family:Arial;
+		font-size: 15px;
+		color: #555;
+		min-width: 115px;
+		display: inline-block;
+		padding-right: 24px;
+	}
+}
+.th_carOrder {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #CADFAA;
+	>header {
+		@extend %Header;
+		margin-bottom: 20px;
+		h4 {
+			display: inline-block;
+			margin-right: 90px;
+		}
+		p {
+			display: inline-block;
+			font-size: 13px;
+		}
+	}
+	>table {
+		width: 100%;
+		th {
+			width: span(3 of 24);
+			background-color: #F3F3F3;
+			color: #535353;
+			padding: 15px 15px 15px 40px;
+			@include box-sizing(border-box);
+		}
+		td {
+			width: span(21 of 24);
+			padding: 5px 0 5px 30px;
+			@include box-sizing(border-box);
+			input[type=text] {
+				border:1px solid #CADFAA;
+				height: 28px;
+				padding-right: 5px;
+				padding-left: 5px;
+				@include box-sizing(border-box);
+				width: span(8 of 24);
+				float: left;
+				margin-right: 20px;
+			}
+			select {
+				border:1px solid #CADFAA;
+				height: 28px;
+				padding-right: 5px;
+				padding-left: 5px;
+				@include box-sizing(border-box);
+				float: left;
+				margin-right: 10px;
+			}
+			p {
+				font-size: 13px;
+				color: #D96D00;
+				margin-top: 5px;
+			}
+			label {
+				font-size: 13px;
+				margin-right: 10px;
+				display: inline-block;
+				margin-top: 5px;
+			}
+			.noColor {
+				color: #272822;
+			}
+			textarea {
+				border:1px solid #CADFAA;
+				padding-right: 5px;
+				padding-left: 5px;
+				@include box-sizing(border-box);
+				width: span(13 of 24);
+				float: left;
+				margin-right: 20px;
+				resize:none;
+			}
+		}
+		tr {
+			border-bottom: 3px solid $lightColor;
+		}
+	}
+	&+ .th_carOrder {
+		margin-top: 90px;
+	}
+}
+.send {
+	@extend %radiusBT;
+	color: $lightColor;
+	background-color: #FF0000;
+	float: right;
+	margin: 30px 0;
+	&:hover {
+		color: $lightColor;
+	}
+}
+//===== RWD變版 =====
+
+@include breakpoint(max-width 1270px) {
+	.ly_car {
+		padding-right: 20px;
+		padding-left: 20px;
+		@include box-sizing(border-box);
+	}
+	.th_carOrder {
+		> table{
+			th {
+				padding-left: 15px;
+				@include box-sizing(border-box);
+			}
+		}
+	} 
+}
+@include breakpoint(max-width 980px) {
+	.th_carPay {
+		>table {
+			td, tr {
+				display: block;
+			}
+			tr {
+				border:none;
+			}
+			td {
+				border-bottom: 2px solid #CADFAA;
+				float: left;
+				width: 100%;
+				position: relative;
+				&.oneColumn {
+					width: 100%;
+					border-width: 1px;
+					border-color: #eee;
+					label {
+						position: absolute;
+						top: 0;
+						left: 0;
+						padding-top: 19px;
+						padding-bottom: 19px;
+					}
+				}
+			}
+			h6 {
+				padding-left: 70px;
+			}
+		}
+	}
+	.md_carPlace {
+		>table {
+			thead {
+				display: none;
+			}
+			tr {
+				float: left;
+				width: 100%;
+				display: block;
+			}
+			td {
+				display: inline-block;
+				width: 100%;
+				padding-left: 28%;
+				padding-right: 2%;
+				@include box-sizing(border-box);
+				float: left;
+				text-align: left;
+				position: relative;
+				border-bottom: 1px solid #eee;
+				&:before {
+					content: attr(data-th);
+					// white-space: pre;
+					width:25%;
+					float:left;
+					text-align: center;
+					word-wrap: break-word;
+					word-break:break-all;
+					background-color: #F3F3F3;
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					@include box-sizing(border-box);
+				}
+			}
+			.name {
+				width: 100%;
+				padding-left: 28%;
+				padding-right: 2%;
+				@include box-sizing(border-box);
+				div {
+					width: 100%;
+					float: left;
+				}
+
+			}
+		}
+	}
+}
+@include breakpoint(max-width 900px) {
+	.th_carOrder {
+		&+ .th_carOrder {
+			margin-top: 30px;
+		}
+		>table {
+			tr {
+				background-color: #F3F3F3;
+			}
+			th {
+				@include span(5 of 24);
+			}
+			td {
+				@include span(19 of 24);
+				padding: 10px;
+				@include box-sizing(border-box);
+				input[type=text] {
+					width: 100%;
+				}
+				select {
+					margin-bottom: 10px;
+				}
+				p {
+					float: left;
+				}
+				textarea {
+					margin-right: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+@include breakpoint(max-width 800px) {
+	.carPlace {
+		width: 100%;
+		margin-right: 0;
+		float: none;
+		padding-right: 20px;
+		padding-left: 20px;
+		@include box-sizing(border-box);
+		span {
+			padding-right: 10px;
+		}
+	}
+	.pt_carPlace {
+		> header{
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+			padding-right: 20px;
+			padding-left: 20px;
+			padding-bottom: 20px;
+			@include box-sizing(border-box);
+			text-align: right;
+		}
+	}
+}
+@include breakpoint(max-width 780px) {
+	.th_car {
+		ul {
+			li {
+				padding: 10px;
+				&+li {
+					margin-left: 30px;
+					&:before {
+						width: 20px;
+						left: -28px;
+						top: 6px;
+					}
+				}
+			}
+		}
+	}
+	.th_carPay {
+		>table {
+			span {
+				float: left;
+				display: block;
+				width: 100%;
+				margin-top: 0;
+				padding-left: 10px;
+				@include box-sizing(border-box);
+			}
+		}
+	}
+}
+@include breakpoint(max-width 580px) {
+	.th_car {
+		padding-top: 10px;
+		padding-bottom: 20px;
+		ul {
+			li {
+				width: 100%;
+				@include box-sizing(border-box);
+				margin-bottom: 5px;
+				&+li {
+					margin-left: 0;
+					&:before {
+						display: none;
+					}
+				}
+			}
+			span {
+				float: left;
+				margin-left: 24%;
+			}
+			strong {
+				float: left;
+			}
+		}
+	}
+	.th_carOrder {
+		>table {
+			th {
+				@include span(7 of 24);
+				padding: 5px;
+				@include box-sizing(border-box);
+			}
+			td {
+				@include span(17 of 24);
+				padding: 5px;
+				@include box-sizing(border-box);
+			}
+		}
+	}
+}
+@include breakpoint(max-width 500px) {
+	.carPlace {
+		p {
+			width: span(16 of 24);
+			strong {
+				display: block;
+			}
+		}
+		span {
+			width: span(8 of 24);
+			min-width: auto;
+		}
+	}
+	.th_carPlace {
+		>footer {
+			ul {
+				margin-bottom: 10px;
+			}
+			li {
+				@include span(12 of 24);
+				a {
+					width: 100%;
+					display: block;
+				}
+			}
+			a {
+				padding: 10px;
+				@include box-sizing(border-box);
+				text-align: center;
+			}
+			.on {
+				@include span(24);
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			>a {
+				@include span(24);
+			}
+		}
+	}
+	.send {
+		width: 100%;
+		@include box-sizing(border-box);
+		text-align: center;
+	}
+}

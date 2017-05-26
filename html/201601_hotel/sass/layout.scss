@@ -1,0 +1,240 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "reset";
+@import "variable";
+@import "extend";
+@import "mixin";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: $mainWidth;
+
+}
+
+//===== PC版 =====
+
+#wrap {
+	position: relative;
+	height: 100%;
+}
+#header {
+	background-color: rgba(51,51,51, .8);
+	height: 60px;
+	@extend %word;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+	.header_content {
+		position: relative;
+		z-index: 99;
+		.nav_L, .nav_R {
+			width: 50%;
+			white-space: nowrap;
+		}
+		.nav_L {
+			float: left;
+			text-align: right;
+			padding-right: 70px;
+			@include box-sizing(border-box);
+		}
+		.nav_R {
+			float: right;
+			padding-left: 70px;
+			@include box-sizing(border-box);
+		}
+		li {
+			display: inline-block;
+			margin: 15px 30px 0;
+			a {
+				color: $lightColor;
+				font-weight: bolder;
+				padding-top: 8px;
+				padding-bottom: 8px;
+				display: inline-block;
+				text-decoration: none;
+				&:hover {
+					border-bottom: 2px solid $lightColor;
+				}
+			}
+		}
+		>h1 {
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			margin-left: -45px;
+		}
+		.order {
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			@include border-radius(4px);
+			text-align: center;
+			position: absolute;
+			top: 15px;
+			right: 24px;
+			background-color: #555;
+			color: $lightColor;
+			font-size: 15px;
+			font-weight: bolder;
+			text-decoration: none;
+			&:hover {
+				background-color: #000;
+			}
+		}
+		.menu {
+			display: inline-block;
+			padding:12px 15px 0;
+			height: 50px;
+			@include box-sizing(border-box);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 20;
+			background: url(../images/line.png) no-repeat right;
+			display: none;
+		}
+	}
+}
+#footer {
+	@extend %word;
+	@include span(24 nest);
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	z-index: 6;
+	.footer_L {
+		height: 40px;
+		@include span(16 of 24 nest);
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-top: 10px;
+		@include box-sizing(border-box);
+		background-color: rgba(255,255,255, .9);
+		h5 {
+			float: left;
+			margin-right: 40px;
+		}
+		p {
+			font-size: 12px;
+			color: #333;
+			display: inline-block;
+			span {
+				font-size: inherit;
+				color: inherit;
+				display: inline-block;
+				margin-right: 40px;
+			}
+		}
+	}
+	.Community {
+		float: right;
+		a {
+			display: inline-block;
+			margin-left: 15px;
+		}
+		img {
+			display: inline-block;
+		}
+	}
+	.footer_R {
+		height: 40px;
+		padding-top: 10px;
+		padding-left: 30px;
+		@include box-sizing(border-box);
+		@include span(8 of 24 nest);
+		background-color: #555;
+		p {
+			font-size: 12px;
+			color: #fff;
+		}
+	}
+}
+
+
+
+//===== RWD變版 =====
+
+//非 IE8 專用
+@include breakpoint(0px) {
+  html, body {
+    min-width: 320px
+  }
+}
+//Pad 專用
+@include breakpoint(max-width 1200px) {
+	#header {
+		.header_content {
+			li {
+				margin-right: 15px;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+@include breakpoint(max-width 980px) {
+	#header{
+		height: 50px;
+		.header_content {
+			.nav_L, .nav_R {
+				display: none;
+			}
+			>h1 {
+				top: 5px;
+			}
+			.order {
+				top: 10px;
+			}
+			.menu {
+				display: block;
+			}
+		}
+	}
+	#footer {
+		position: relative;
+		height: auto;
+		.footer_L {
+			height: auto;
+			@include span(24 nest);
+			padding-bottom: 10px;
+		}
+		.footer_R {
+			height: auto;
+			@include span(24 nest);
+			padding-bottom: 10px;
+			padding-left: 20px;
+		}
+	}
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+	#footer {
+    	.footer_L {
+    		h5 {
+    			float: none;
+    			margin-bottom: 5px;
+    		}
+    	}
+    }
+}
+
+@include breakpoint(max-width 500px) {
+	#footer {
+		.Community {
+			margin-top: 5px;
+			float: none;
+			a {
+				margin-left: 0;
+				margin-right: 15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+
+//===== PC版 =====
+main {
+  background: url(../images/common/topBannerBg.jpg) no-repeat center top;
+}
+.md_friend {
+  margin-bottom: 30px;
+
+  >h6 {
+    margin-bottom: 30px;
+  }
+  >div {
+    ul {
+      @extend %clear;
+    }
+    li {
+      width: 156px;
+      height: 275px;
+      padding: 7px;
+      @include box-sizing(border-box);
+      float: left;
+      text-align: center;
+      box-shadow: 2px 2px 5px #ddd;
+      margin: 0 1.3% 3% 1.3%;
+    }
+  }
+}
+.pt_friend {
+	text-decoration: none;
+  >h6 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $pinkColor;
+	font-size: 18px;
+	color: $darkRed;
+  }
+  p {
+    color: #727171;
+    span {
+      padding: 0 4px;
+    }
+  }
+}
+.th_index {
+  margin-bottom: 20px;
+  float: left;
+  >h5 {
+    background-color: $pinkColor;
+    text-align: center;
+    width: 100%;
+    height: 38px;
+    float: left;
+    @include border-radius(4px);
+    margin-bottom: 30px;
+    span {
+      display: inline-block;
+      background: url(../images/common/icon01.png) no-repeat left 14px;
+      font-size: 21px;
+      font-weight: bolder;
+      line-height: 38px;
+      color: #fff;
+      padding-left: 15px;
+    }
+  }
+  >div {
+    padding-left: 6px;
+    >img {
+      margin: 25px 0 10px 0;
+      float: left;
+      width: 100%;
+    }
+  }
+}
+.md_index {
+  @include span(9 of 18);
+  min-height: 138px;
+  >header {
+    @include span(5 of 9);
+    float: left;
+    img {
+      max-width: 100%;
+    }
+  }
+  >div {
+    @include span(4 of 9);
+    >h6 {
+      margin-bottom: 10px;
+      a {
+        font-size: 21px;
+        color: $darkRed;
+        font-weight: bolder;
+        text-decoration: none;
+      }
+    }
+    >strong {
+      font-size: 18px;
+      color: #333;
+      font-weight: bolder;
+    }
+    >p {
+      font-size: 15px;
+      color: #727171;
+    }
+  }
+}
+
+
+
+
+//===== RWD變版 =====
+
+//Pad 專用
+@include breakpoint(max-width 980px) {
+
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+  .md_friend {
+  	>div {
+  		li {
+  			height: auto;
+  			@include span(isolate 20 of 24 at 3);
+  			margin-right: 100%;
+  			margin-bottom: 20px;
+  			img {
+  				width: 100%;
+  			}
+  		}
+  	}
+  }
+  .md_index {
+  	@include span(24);
+  	min-height: auto;
+    margin-bottom: 30px;
+  	>header {
+  		@include span(8 of 24);
+  	}
+  	>div {
+  		@include span(16 of 24);
+  	}
+  }
+  .th_index {
+    >div {
+      >img {
+        display: none;
+      }
+    }
+  }
+}

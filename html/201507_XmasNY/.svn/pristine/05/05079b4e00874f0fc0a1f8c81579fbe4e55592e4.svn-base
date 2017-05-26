@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>2015連休攻略</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+        
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="header_content">
+                <h1><a href="#" title="2015連休攻略"><img src="images/header.png"></a></h1>
+                <a href="#" class="menu"><span>menu</span></a>
+                <div class="nav">
+                    <ul class="firstNav">
+                    <!-- 有第二個選單要加on -->
+                         <li class="on"><a href="#">國外團體</a>
+                            <ul class="secNav">
+                                <li><a href="#">日本</a>
+                                    <ul class="thirdNav">
+                                        <li><a href="#">北海道</a></li>
+                                        <li><a href="#">東京</a></li>
+                                        <li><a href="#">關西</a></li>
+                                        <li><a href="#">九州</a></li>
+                                        <li><a href="#">北陸</a></li>
+                                        <li><a href="#">沖繩</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">韓國</a>
+                                    <ul class="thirdNav">
+                                        <li><a href="#">首爾</a></li>
+                                        <li><a href="#">釜山</a></li>
+                                        <li><a href="#">濟州</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">東南亞</a></li>
+                                <li><a href="#">大陸</a></li>
+                                <li><a href="#">關島帛琉</a></li>
+                                <li><a href="#">歐洲</a></li>
+                                <li><a href="#">亞非</a></li>
+                                <li><a href="#">美加</a></li>
+                                <li><a href="#">紐奧</a></li>
+                                <li><a href="#">中南美洲</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">世界主題</a></li>
+                        <li><a href="#">雄獅自由行</a></li>
+                        <li><a href="#">航空自由行</a></li>
+                        <li><a href="#">機票</a></li>
+                        <li><a href="#">訂房</a></li>
+                        <li><a href="#">票劵</a></li>
+                        <li><a href="#">國內旅遊</a></li>
+                        <li><a href="#">台中出發</a></li>
+                        <li><a href="#">高雄出發</a></li>
+                        <li class="bt_newyear"><a href="#">跨年大集合</a></li>
+                    </ul>
+                </div>
+                <a href="#" id="topBt">TOP</a>
+            </div>
+        </div>
+        <div id="main">
+            <div class="md_main">
+                <div class="main">
+                    <div class="topBanner">
+                        <h6><a href="#" class="on"><span>聖誕禮物大方送<img src="images/borrow.png"></span></a></h6>
+                        <h6><a href="#"><span>星座X交換禮物篇<img src="images/borrow.png"></span></a></h6>
+                    </div>
+                    <!-- 活動說明 activity -->
+                    <div class="activity">
+                        <h5><span>活動說明</span></h5>
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <p>你還在煩惱今年交換禮物要送什麼嗎?十二星座紅配綠，最潮交換禮物報你知。選擇送禮對象的星座，看看他/她今年最適合收到什麼樣的禮物呢 ?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 星座預測 -->
+                    <div class="star">
+                        <div class="Box_header">
+                            <h4>【風象星座】</h4>
+                        </div>
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <p>內文100字) 12月份旅遊運增強，旅遊途中會有很多好康的事發生。建議ㄧ群人遠行會有很多有趣的事情發生。特別推薦旅遊小物作為交換禮物，也可以為2016年帶來順利的旅遊運。</p>
+                                <div class="figureBox">
+                                    <div class="figure">
+                                        <img src="http://fakeimg.pl/250x200/">
+                                        <p class="figcaption">HOHO粉彩記事本</p>
+                                    </div>
+                                    <div class="figure">
+                                        <img src="http://fakeimg.pl/250x200/">
+                                        <p class="figcaption">HOHO粉彩記事本</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bt_free">
+                        <a href="#"><span><strong>點此看</strong>如何免費獲得上述禮品!<img src="images/borrow.png"></span></a>
+                    </div>
+                    <!-- 合作廠商 -->
+                    <div class="activity">
+                        <h5><span>合作廠商</span></h5>
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <div class="sponsor">
+                                    <div class="figure">
+                                        <img src="http://fakeimg.pl/200x200/">
+                                    </div>
+                                    <div class="sponsorWord">
+                                        <p>即日起至2015/11/30前，於雄獅旅遊網網路下單購買任一旅遊商品並完成付款者， 即可獲得由知名XXXXX品牌【XXXX】專屬$500元抵用劵一組，每一會員帳號限獲得一次，數量有限送完為止唷！</p>
+                                        <div class="sponsorLink">
+                                            <a href="#" class="on">異業官網<img src="images/borrow-.png"></a>
+                                            <a href="#" class="fb">FB粉絲團<img src="images/borrow-.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="give">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_01.png" title="聖誕禮物,訂就送"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="gift.html"><img src="images/give.jpg" height="276" width="311"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dressed">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_02.png" title="趴踢穿搭,吸睛術"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/dressed.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forecast">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_03.png" title="跨年地點,大預測"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/forecast.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_04.png" title="跨年必讀,懶人包"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/view.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/act.js" type="text/javascript"></script>

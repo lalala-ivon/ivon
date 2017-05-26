@@ -1,0 +1,525 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+
+//===== PC版 =====
+
+.md_active {
+  >ul {
+    @include span(24);
+    white-space: nowrap;
+    border-bottom: 1px solid $purpleColor;
+    margin-bottom: 40px;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      a {
+        display: inline-block;
+        width: 130px;
+        height: 34px;
+        text-align: center;
+        line-height: 34px;
+        background-color: #fff;
+        color: $purpleColor;
+        font-size: 18px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        border-bottom: none;
+      }
+      &.on {
+        a {
+          background-color: $purpleColor;
+          color: #fff;
+          border: 1px solid $purpleColor;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+.pt_active {
+  border-bottom: 1px dashed #ddd;
+  @include span(24);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  >a {
+    @include span(12 of 24);
+    text-decoration: none;
+    display: block;
+    figure {
+      @include span(5 of 12);
+      img {
+        padding: 1px;
+        border:1px solid #ddd;
+        width: 100%;
+      }
+    }
+    div {
+      @include span(7 of 12);
+      h4 {
+        font-size: 14px;
+        content: $pinkColor;
+      }
+      strong {
+        color: $purpleColor;
+        font-size: 13px;
+      }
+      p {
+        color: #666;
+        font-size: 13px;
+      }
+      li {
+        color: $purpleColor;
+        display: inline-block;
+        background: url(../images/common/borrow-01.png) no-repeat left 8px;
+        padding-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.active {
+  @include span(24 nest);
+  ul {
+    @include span(24);
+    padding-left: 20px;
+    @include box-sizing(border-box);
+  }
+  li {
+    @include span(6 of 24);
+    a {
+      text-decoration: none;
+    }
+    figure {
+      background: url(../images/act/picBg.jpg) no-repeat ;
+      padding: 4px 3px;
+      margin-bottom: 10px;
+      img {
+        max-width: 100%;
+      }
+    }
+    p {
+      text-align: center;
+    }
+    strong {
+      display: block;
+      font-size: 14px;
+      color: $pinkColor;
+    }
+    span {
+      display: block;
+      font-size: 13px;
+      color: $purpleColor;
+    }
+  }
+}
+.th_actIntro {
+  @include span(24 nest);
+  margin-bottom: 45px;
+  float: left;
+  >header {
+    margin-bottom: 20px;
+    h3 {
+      display: inline-block;
+      background-color: $purpleColor;
+      color: #fff;
+      text-align: center;
+      padding: 8px;
+      font-size: 18px;
+      font-weight: bolder;
+      margin-right: 10px;
+    }
+    strong {
+      font-size: 16px;
+      color: $pinkWord;
+      span {
+        font-size: 15px;
+        color: $purpleColor;
+        padding-right: 10px;
+      }
+    }
+  }
+  >div {
+    @include span(24 nest);
+  }
+}
+.actPic {
+  @include span(14 of 24 nest);
+  >div  {
+    @include span(10 of 14 nest);
+    img {
+      border:1px solid #ccc;
+      width: 100%;
+    }
+  }
+  >ul {
+    @include span(4 of 14 nest);
+    padding:0 22px 0 14px;
+    @include box-sizing(border-box);
+    li {
+      text-align: center;
+      a {
+        display: inline-block;
+      }
+      img {
+        border:1px solid #ccc;
+        max-width: 100%;
+      }
+      &+li {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+.actdata {
+  @include span(10 of 24 nest);
+  table {
+    border-collapse:collapse;
+    width: span(10 of 10 nst);
+    margin-bottom: 10px;
+  }
+  tr {
+    font-size: 13px;
+  }
+  th, td {
+    padding: 5px 6px;
+    @include box-sizing(border-box);
+    border-bottom: 1px solid #fff;
+    
+  }
+  th {
+    width: span(7 of 24 nest);
+    // width: span(3 of 10);
+    background-color: #FFE6E6;
+    color: $pinkColor;
+    text-align: right;
+    border-right: 1px solid #fff;
+    vertical-align: top;
+  }
+  td {
+    // width: span(17 of 24 nest);
+    background-color: #F5EEF7;
+    color: #666;
+  }
+  .actAdd {
+    >td {
+      position: relative;
+      p {
+        @include span(14 of 17);
+        float: left;
+      }
+      a {
+        float: right;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+        width: 51px;
+        height: 26px;
+      }
+      
+    }
+  }
+  .fettle {
+    >th {
+       background-color: $pinkColor;
+       color: #fff;
+    }
+    >td {
+      background-color: $purpleColor;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  >a {
+    width: 141px;
+    height: 40px;
+    display: block;
+    background: url(../images/act/sign.png) no-repeat;
+    margin: auto;
+    text-indent: -9999px;
+  }
+}
+.md_actIntro {
+  margin-bottom: 35px;
+  @include span(24 nest);
+  >header {
+    background: url(../images/common/linear-02.jpg) repeat-x top;
+    @extend %linear01;
+  }
+  >div {
+    border:2px solid #FFE6E6;
+    >h4 {
+      line-height: 40px;
+      background-color: #FFF0F0;
+      color: $darkRed;
+      font-size: 13px;
+      text-indent: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.pt_actIntro {
+  padding: 0 25px;
+  margin-bottom: 15px;
+  >p {
+      font-size: 13px;
+      color: #666;
+      span {
+        color: #4E67C0;
+      }
+      em {
+        color: #B88CC5;
+      }
+  }
+  >header {
+    margin-bottom: 20px;
+    p {
+      font-size: 15px;
+      color: $pinkColor;
+    }
+  }
+  >div {
+    h6, li {
+      font-size: 13px;
+      content: #666;
+    }
+  }
+  >li {
+    span {
+      color: $pinkColor;
+    }
+  }
+}
+.md_actDetail {
+  @include span(24 nest);
+  margin-bottom: 45px;
+  >h4 {
+    @extend %linear01;
+    background: url(../images/common/linear-01.jpg) repeat-x top;
+  }
+  >div {
+    border:2px solid #ECDEEF;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .tabs {
+    @extend %clear;
+      height: 40px;
+      background-color: #F5EEF7;
+    &+div {
+      width: 100%;
+      padding: 25px 40px;
+      @include box-sizing(border-box);
+      p,li {
+        margin-bottom: 15px;
+        span, a {
+          color: $pinkColor;
+        }
+      }
+      
+    }
+    >li {
+      float: left;
+      >a {
+        display:inline-block;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+        color: #4D66BF;
+        padding: 0 25px;
+        &:hover {
+          color:#B88CC5;
+        }
+      }
+      >div {
+      }
+      &.on {
+        >a {
+          text-decoration: none;
+          color:#B88CC5;
+          &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #BA8CC6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+          
+        }
+        >div {
+          display: block;
+        }
+      }
+      
+    }
+  }
+  footer {
+    text-align: center;
+    >a {
+      @extend %lineBT;
+      text-decoration: none;
+      &+a {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.actSearch {
+  @include span(24 nest);
+  height: 40px;
+  background-color: #F5EEF7;
+  padding: 0 20px;
+  @include box-sizing(border-box);
+  label {
+    background: url(../images/act/zoom.png) no-repeat left 5px;
+    padding-left: 30px;
+    height: 40px;
+    line-height: 40px;
+    color: #4D66BF;
+    display: inline-block;
+    width: 140px;
+    float: left;
+    @include box-sizing(border-box);
+    text-align: center;
+  }
+  select {
+    @include span(18 of 24);
+    // padding-left: 140px;
+    margin-top: 10px;
+    @include box-sizing(border-box);
+  }
+}
+
+//===== RWD變版 =====
+@include breakpoint(max-width 1260px) {
+  .active {
+    li {
+      figure {
+        background: none;
+        padding: 4px;
+        border:1px solid #ddd;
+        @include box-sizing(border-box);
+        text-align: center;
+        img {
+        }
+      }
+    }
+  }
+
+}
+//Pad 專用
+@include breakpoint(max-width 980px) {
+
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+  .md_active {
+    >ul {
+      li {
+        a {
+          width: 90px;
+        }
+      }
+    }
+  }
+  .pt_active {
+    >a {
+      @include span(24);
+      margin-bottom: 20px;
+      figure {
+        @include span(8 of 24);
+        img {
+          width: 100%;
+        }
+      }
+      div {
+        @include span(16 of 24);
+      }
+    }
+  }
+  .active {
+    ul {
+      padding-left: 0;
+    }
+    li {
+      @include span(12 of 24);
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .actPic {
+    @include span(24);
+    margin-bottom: 20px;
+    >div {
+      @include span(18 of 24);
+      img {
+        width: 100%;
+      }
+    }
+    >ul {
+      @include span(6 of 24);
+      padding: 0;
+      li {
+        &+li {
+          margin-top: 0;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .actdata {
+    @include span(24);
+    table {
+      width: 100%;
+    }
+  }
+  .md_actDetail {
+    .tabs {
+      height: auto;
+      @include span(24 nest);
+      float: none;
+      >li {
+        float: none;
+        // @include span(24 nest);
+        >a {
+          background-color: #F5EEF7;
+          display: block;
+          @include span(24 nest);
+          @include box-sizing(border-box);
+          border-bottom: 2px solid #fff;
+        }
+      }
+    }
+  }
+  .actSearch {
+    height: auto;
+    label {
+      height: 30px;
+      line-height: 35px;
+    }
+    select {
+      margin-bottom: 10px;
+      @include span(24);
+    }
+  }
+}

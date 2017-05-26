@@ -1,0 +1,147 @@
+%indent {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+%decoration {
+    display: block;
+    text-decoration: none;
+}
+%block {
+    @include container();
+    max-width: $mainWidth;
+}
+%vertical-outer {
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+        content: "";
+        visibility: hidden;
+    }
+}
+%vertical-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%inline-outer {
+  letter-spacing: -4px; //可能需要微調
+  // word-spacing: -4px;
+  font-size: 0;
+}
+%inline-inner {
+  letter-spacing: normal; //可能需要微調
+  // word-spacing: normal;
+  display:inline-block;
+  *display: inline;
+  zoom:1;
+}
+// 省略...
+%da {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//清掉float
+%clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+// 漸層-淡紅
+%linear {
+  background: linear-gradient(top, #F5C2D3,#FBE3EB);
+}
+// 漸層-深紅
+%linear-01 {
+  background: linear-gradient(top, #EA8EBA,#E12676);
+}
+// 漸層-帶紫
+%linear-02 {
+  background: linear-gradient(top, #F2CCE1,#D0529B);
+}
+
+
+// 漸層文字標題
+%linear01 {
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bolder;
+  padding: 8px 20px;
+  margin-bottom: 1px;
+}
+// 橢圓角按鈕
+%lineBT {
+  display: inline-block;
+  height: 34px;
+  background: linear-gradient(top, #EA8EBA,#E12676);
+  line-height: 34px;
+  text-align: center;
+  padding: 0 22px;
+  color: #fff;
+  @include border-radius(4px);
+}
+// 橢圓角按鈕華過去
+%BThover {
+  background: linear-gradient(top, #F1B8D3, #E85393);
+}
+// table的淺灰底橢圓角header
+%tableHeader {
+  background-color: #eee;
+  text-align: center;
+  color: $pinkColor;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  @include border-radius(8px 8px 0 0);
+  margin-bottom: 2px;
+  >p {
+    text-align: left;
+    font-size: 13px;
+    color: $pinkColor;
+    width: 100%;
+    padding-left: 25px;
+    @include box-sizing(border-box);
+    font-weight: normal;
+  }
+}
+
+
+
+// table底下的footer有兩個選單
+%tableFooter {
+  background-color: #eee;
+  text-align: center;
+  color: $pinkColor;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include border-radius(0 0 8px 8px);
+  margin-top: 2px;
+  font-size: 15px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 2px;
+  @include box-sizing(border-box);
+  >a {
+    @extend %lineBT;
+    text-decoration: none;
+    &:hover {
+      @extend %BThover;
+    }
+    &+a {
+      margin-left: 10px;
+    }
+    img {
+      display: inline-block;
+      padding-right: 6px;
+    }
+  }
+}

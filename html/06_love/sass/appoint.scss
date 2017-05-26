@@ -1,0 +1,148 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+
+//===== PC版 =====
+
+.th_appoint {
+  @include span(24 nest);
+  >header {
+    margin-bottom: 25px;
+    >ul {
+      white-space: nowrap;
+      border-bottom: 1px solid $purpleColor;
+      li {
+        display: inline-block;
+        &+li {
+          margin-left: 8px;
+        }
+        &.on {
+          a {
+            background-color: $purpleColor;
+            color: #fff;
+          }
+        }
+      }
+      a {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 10px 25px;
+        color: $purpleColor;
+        text-decoration: none;
+        border:1px solid #ddd;
+        border-bottom: none;
+      }
+    }
+  }
+  >div {
+    table {
+      width: 100%;
+      tr {
+        width: 100%;
+        border-bottom: 2px solid #fff;
+      }
+      th, td {
+        padding: 15px;
+      }
+      th {
+        width: span(6 of 24);
+        background-color: #F088A7;
+        color: #fff;
+        text-align: right;
+      }
+      td {
+        width: span(18 of 24);
+        background-color: #F5EEF7;
+        label {
+          color: #666;
+          padding-right:10px;
+          display: inline-block;
+        }
+        strong {
+          color: $pinkColor;
+        }
+        input, select, textarea {
+          border:1px solid #E0CBE7;
+        }
+        select, input[type="text"] {
+          width: span(15 of 24);
+        }
+        textarea {
+          width: span(24 of 24)
+        }
+      }
+    }
+    >h3 {
+      width: 100%;
+      font-size: 20px;
+      font-weight: bolder;
+      color: $pinkColor;
+      padding:20px 0;
+      margin-top: 20px;
+      border-top: 1px dashed #ddd;
+    }
+  }
+  .condition {
+    td {
+      >div {
+        color: #777;
+        span {
+          color: $pinkColor;
+          padding-left: 10px;
+        }
+      }
+      input[type="text"] {
+        width: span(5 of 24);
+        margin: 0 10px;
+      }
+    }
+  }
+  >footer {
+    background-color: #eee;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 2px;
+    @include box-sizing(border-box);
+    >a {
+      @extend %lineBT;
+      text-decoration: none;
+      &:hover {
+        @extend %BThover;
+      }
+      &+a {
+        margin-left: 10px;
+      }
+      img {
+        display: inline-block;
+        padding-right: 6px;
+      }
+    }
+  }
+}
+//===== RWD變版 =====
+@include breakpoint(max-width 1260px) {
+
+}
+//Pad 專用
+@include breakpoint(max-width 980px) {
+
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+  .th_appoint {
+    label {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+  }
+}

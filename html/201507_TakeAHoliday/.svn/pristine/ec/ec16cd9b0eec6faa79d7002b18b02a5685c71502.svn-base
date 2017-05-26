@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>醬玩東南亞,$10,000旅遊金,萬元週週抽</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/view.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <nav>
+            <ul>
+                <li><a href="lion.html">百人壯遊</a></li>
+                <li><a href="bonus.html">加值不加價</a></li>
+                <li><a href="honeymoon.html">蜜月旅行</a></li>
+                <li><a href="history.html">歷史巡禮</a></li>
+                <li class="on"><a href="food.html">美食美景</a>
+                    <ul>
+                        <li><a href="food.html">當地風味美食.名店</a></li>
+                        <li><a href="view.html">東南亞五大海島</a></li>
+                    </ul>
+                </li>
+                <li class="week"><a href="week.html">週週<strong>抽萬元</strong><img src="images/week.png"></a></li>
+            </ul>
+        </nav>
+        <div id="header" class="foodHeader">
+            <div class="header_content">
+                <h1><a href="index.html"><img alt="醬玩東南亞,$10,000旅遊金,萬元週週抽" src="images/logo.png"></a></h1>
+            </div>
+            <div class="header_CT">
+                <header><img alt="放自己一個假吧 越早報名機會越大" src="images/subtitle.png"></header>
+                <h2><img alt="當地風味美食,名店推薦" src="images/foodTitle.png"></h2>
+            </div>
+            <a href="#" class="menu"><span>Menu</span></a>
+            <a href="#" id="topBt">TOP</a>
+        </div>
+        <div id="main">
+            <main>
+                <div class="anchor">
+                    <ul>
+                        <li><a href="#a01"><span>泰國</span><strong>霸王將軍麵</strong></a></li>
+                        <li><a href="#a02"><span>泰國</span><strong>蔚藍海岸景觀餐廳</strong></a></li>
+                        <li><a href="#a03"><span>新加坡</span><strong>海南雞飯</strong></a></li>
+                        <li><a href="#a04"><span>馬來西亞</span><strong>吉隆坡亞羅街夜市</strong></a></li>
+                        <li><a href="#a05"><span>馬來西亞</span><strong>檳城新關仔角夜市</strong></a></li>
+                        <li><a href="#a06"><span>馬來西亞</span><strong>沙巴富源下午茶</strong></a></li>
+                        <li><a href="#a07"><span>峇里島</span><strong>STAR ANISE 皇家20道印式風味餐</strong></a></li>
+                        <li><a href="#a08"><span>峇里島</span><strong>水上發呆亭</strong></a></li>
+                        <li><a href="#a09"><span>北越</span><strong>米其林一星推薦香港添好運餐廳</strong></a></li>
+                    </ul>
+                </div>
+                <div class="th_view">
+                    <!-- 第一個美食開始 -->
+                    <div class="md_view">
+                        <a id="a01" name="a01"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-01.jpg">
+                            </figure>
+                            <div>
+                                <h3>泰國/<strong>霸王將軍麵</strong></h3>
+                                <p>中華餐館『香格里拉大酒樓』所推出的一種超大碗公的龍蝦湯麵，由於頗具噱頭，成了店內招牌。主要特色是店內會安排2位服務生，打扮成古代將軍模樣，然後像扛轎子一樣將這一大缸剛煮好熱騰騰的龍蝦湯麵，扛到客人餐桌上，大喊著『霸王將軍麵好吃頂呱呱』口號，再開始幫客人服務。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第二個美食開始 -->
+                    <div class="md_view">
+                        <a id="a02" name="a02"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-02.jpg">
+                            </figure>
+                            <div>
+                                <h3>泰國/<strong>蔚藍海岸景觀餐廳</strong></h3>
+                                <p>進入這家鄰近海岸的餐廳，映入眼簾的是蔚藍海水，迎面而來的是徐徐海風。夕陽即將西下時，橘色雲海映入湛藍海面，如同一幅美畫。除了美景，廚師精巧的手藝，在芭達雅早已享譽多時，烹調著各式佳餚，在美景伴同下，胃口一定大開。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第三個美食開始 -->
+                    <div class="md_view">
+                        <a id="a03" name="a03"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-03.jpg">
+                            </figure>
+                            <div>
+                                <h3>新加坡/<strong>海南雞飯</strong></h3>
+                                <p>公認為新加坡的國家級美食代表，源於中國海南島的海南雞飯，隨著海南移民來到新加坡後，在不同種族與環境的薰陶下，漸漸演變出獨一無二的新加坡海南雞飯。米飯淋上雞湯與雞油一起蒸煮，融入雞肉香味的米飯不但粒粒分明，還漾著油亮的誘人光澤。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第四個美食開始 -->
+                    <div class="md_view">
+                        <a id="a04" name="a04"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-04.jpg">
+                            </figure>
+                            <div>
+                                <h3>馬來西亞/<strong>吉隆坡亞羅街夜市</strong></h3>
+                                <p>食尚玩家推薦，整條人行道上炊煙昇起，瀰漫著咖喱及烤肉味，馬來西亞的美食基本上是綜合華人、馬來、印度三種飲食文化，讓您感受異國的馬來文化。有名的黃亞華燒雞翼及烤沙爹最值得來品嚐，另外還有蕉葉紅燒魔鬼魚及福建炒麵也是不容錯過的!!</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第五個美食開始 -->
+                    <div class="md_view">
+                        <a id="a05" name="a05"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-05.jpg">
+                            </figure>
+                            <div>
+                                <h3>馬來西亞/<strong>檳城新關仔角夜市</strong></h3>
+                                <p>檳城必造訪的夜市，走一圈，幾乎可以吃到檳城的著名小吃，如炒粿條、福建蝦麵。不只是旅客愛來，連檳城人也很喜歡到新關仔角，除了選擇多、美味外，價錢也公道，叫再多也不怕。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第六個美食開始 -->
+                    <div class="md_view">
+                        <a id="a06" name="a06"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-06.jpg">
+                            </figure>
+                            <div>
+                                <h3>馬來西亞/<strong>沙巴富源下午茶</strong></h3>
+                                <p>店內的招牌是牛油咖椰(kaya)，大片的奶油鋪在香甜的椰醬上，搭配烤的香酥的土司麵包，滋味迷人。麵包和椰醬都是店家自製，麵包有咬勁，椰醬則有原味及斑蘭葉2種口味。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第七個美食開始 -->
+                    <div class="md_view">
+                        <a id="a07" name="a07"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-07.jpg">
+                            </figure>
+                            <div>
+                                <h3>峇里島/<strong>STAR ANISE 皇家20道印式風味餐</strong></h3>
+                                <p>STAR ANISE花園餐廳的印式餐非常豐富，一次上齊多達二十道不同特色的風味料理，精選自西爪哇、雅加達、巴里島的炸蛋、龍目島的大力王雞翅、印尼沙拉特配特殊黃薑飯。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第八個美食開始 -->
+                    <div class="md_view">
+                        <a id="a08" name="a08"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-08.jpg">
+                            </figure>
+                            <div>
+                                <h3>峇里島/<strong>水上發呆亭</strong></h3>
+                                <p>以最原始的竹子茅草營造熱帶島嶼氛圍的「Bale Udang Mang Engking」，主打在水上發呆亭中享用活海鮮熱炒搭配當地百度谷的新鮮蔬菜；酒足飯飽之際，悠閒仰望星空，為一天劃下美好句點。</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 第九個美食開始 -->
+                    <div class="md_view">
+                        <a id="a09" name="a09"></a>
+                        <header>
+                            <figure>
+                                <img src="images/food-09.jpg">
+                            </figure>
+                            <div>
+                                <h3>北越/<strong>米其林一星推薦香港添好運餐廳</strong></h3>
+                                <p>樂天中心36樓店內十分寬敞，從落地窗看出去可以看到河內市區景象，在此享受在河內悠哉美好的下午茶時光。四大天王主廚名點(酥皮局叉燒包、香煎蘿蔔糕、香滑馬來糕、黃沙豬潤腸)不可錯過</p>
+                            </div>
+                        </header>
+                        <ul>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>此區段最多44個中文字~多的會被省略</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                            <li class="viewLink">
+                                <a href="#">
+                                    <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p>
+                                    <footer>特價<strong>$23,800</strong>起</footer>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/act.js" type="text/javascript"></script>

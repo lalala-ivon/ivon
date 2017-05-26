@@ -1,0 +1,748 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+
+//===== PC版 =====
+
+.th_server {
+  @include span(24 nest);
+  >header {
+    @extend %tableHeader;
+  }
+  >footer {
+    @extend %tableFooter;
+  }
+}
+.md_server {
+  thead {
+    border-collapse:collapse;
+    border-bottom:2px solid #fff;
+    tr {
+      width: 100%;
+    }
+    th {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      width: 20%;
+      background-color: #F088A7;
+      color: #fff;
+      font-size: 15px;
+      text-align: center;
+      &+th {
+        border-left: 1px solid #fff;
+        @include box-sizing(border-box);
+      }
+    }
+  }
+  tbody {
+    border-collapse:collapse;
+    th, td {
+      padding-bottom: 20px;
+      padding-top: 20px;
+      border-bottom: 2px solid #fff;
+      color: #555;
+      @include box-sizing(border-box);
+      vertical-align: top;
+      line-height: 25px;
+    }
+    th {
+      background-color: #F5EEF7;
+      font-size: 14px;
+      text-align: center;
+    }
+    td {
+      text-align: center;
+      background-color: #FCF9FD;
+      padding-right: 20px;
+      padding-left: 20px;
+      @include box-sizing(border-box);
+      span {
+        color: $pinkColor;
+        text-align: center;
+      }
+      p {
+        text-align: left;
+        color: $pinkColor;
+        line-height: 25px;
+      }
+      strong {
+        color: $pinkColor;
+        display: inline-block;
+        padding: 5px 20px;
+        border:1px solid $pinkColor;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+tr.pt_server {
+  td {
+    text-align: left;
+  }
+}
+.md_register {
+  width: 100%;
+  tr {
+    border-bottom: 2px solid #fff;
+    &:last-child {
+      td {
+        text-align: center;
+      }
+    }
+  }
+  tr, td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include box-sizing(border-box);
+  }
+  th {
+    width: 20%;
+    background-color: $lingtPink;
+    color: #fff;
+    text-align: right;
+    font-size: 13px;
+    padding-right: 4px;
+    @include box-sizing(border-box);
+  }
+  td {
+    width: 80%;
+    background-color: #F5EEF7;
+    color: #666;
+    padding-right: 20px;
+    padding-left: 20px;
+    @include box-sizing(border-box);
+    input {
+      border:1px solid #E0CBE7;
+      background-color: #fff;
+      &+ span {
+        margin-left: 10px;
+        color: #666;
+      }
+      &+ label {
+        margin-left: 10px;
+      }
+    }
+    p, label, select {
+      color: #666;
+    }
+    p {
+      display: inline-block;
+      strong {
+        color: $pinkColor;
+      }
+    }
+    label {
+      margin-right: 10px;
+      &+p {
+        display: inline;
+      }
+    }
+    select {
+      margin: 0 5px;
+    }
+    span {
+      label {
+        display: none;
+      }
+    }
+  }
+  .mail {
+    td {
+      input {
+        width: 440px;
+      }
+    }
+  }
+  .check {
+    img {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: text-bottom;
+    }
+    input {
+      margin-right: 10px;
+    }
+    a {
+      color: $pinkColor;
+    }
+  }
+}
+.pt_register {
+  @include span(24);
+  figure {
+    @include span(7 of 24);
+    text-align: center;
+    img {
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+  >div {
+    @include span(17 of 24);
+    h6 {
+      color: #666;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-bottom: 10px;
+    }
+    li {
+      margin-bottom: 5px;
+      color: #666;
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.th_member {
+  @include span(24 nest);
+  >header {
+    ul {
+      @include span(24 nest);
+      white-space: nowrap;
+    }
+    li {
+      display: inline-block;
+      width: 20%;
+      text-align: center;
+      a {
+        text-decoration: none;
+        display: block;
+        // background-color:$lingtPink; 
+        font-size: 15px;
+        color: #666;
+        line-height: 40px;
+        @include border-radius(6px 6px 0 0);
+        @extend %linear;
+      }
+      &.on {
+        a {
+          @extend %linear-01;
+          color: #fff;
+        }
+      }
+    }
+  }
+  >footer {
+    @include border-radius(0 0 8px 8px);
+    background-color: #eee;
+    width: 100%;
+    height: 40px;
+    border-top: 2px solid #fff;
+  }
+}
+.md_member {
+  width: 100%;
+  background-color: #F5EEF7;
+  border-top: 2px solid #fff;
+  >tbody {
+    >tr {
+      >th {
+        background-color: $lingtPink;
+        width: 20%;
+        text-align: right;
+        padding:15px 10px;
+        color: #fff;
+      }
+      >td {
+        width: 80%;
+        padding:15px 10px;
+        >figure {
+          padding: 20px 0;
+          text-align: center;
+          img {
+            display: inline-block;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  td.pt_member {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      width: 50%;
+      vertical-align: top;
+    }
+  }
+  td.member {
+    >table {
+      width: 50%;
+      float: left;
+      th, td {
+        padding:15px 10px;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+      }
+      th {
+        text-align: right;
+        padding-right: 10px;
+        width: 33.5%;
+        background-color: $lingtPink;
+        color: #fff;
+      }
+    }
+  }
+}
+.th_record {
+  float: left;
+  width: 100%;
+  >header {
+    width: 100%;
+    border-bottom: 1px solid $purpleColor;
+    float: left;
+    margin-bottom: 30px;
+    ul {
+      width: 100%;
+    }
+    li {
+      float: left;
+      margin-right: 10px;
+      a {
+        display: inline-block;
+        padding: 7px 20px;
+        border:1px solid #ddd;
+        border-bottom: none;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bolder;
+        color: $purpleColor;
+        &:hover {
+          background-color: $purpleColor;
+          color: #fff;
+        }
+      }
+      &.on {
+        a {
+          background-color: $purpleColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.md_record {
+  width: 100%;
+  >thead {
+    @extend %linear;
+    tr {
+      height: 40px;
+    }
+    th {
+      text-align: center;
+      position: relative;
+      &+th {
+        &:before {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: #999;
+          position: absolute;
+          top: 10px;
+          left: 0;
+        }
+      }
+    }
+  }
+  >tbody {
+    tr {
+      width: 100%;
+      border-bottom: 1px dashed #bbb;
+    }
+    td {
+      padding:20px 0;
+      text-align: center;
+    }
+  }
+  .time {
+    color: $purpleColor;
+  }
+  .agree {
+    color: $pinkColor;
+  }
+  .dayTime {
+    color: $purpleColor;
+    p {
+      color: $purpleColor;
+      
+    }
+  }
+}
+.th_contact {
+  @include span(24 nest);
+  >div {
+    padding-left: 50px;
+    @include box-sizing(border-box);
+    >p {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 20px;
+      a {
+        color: $pinkColor;
+      }
+      >strong {
+        font-size: 20px;
+        font-weight: bolder;
+        color: $pinkColor;
+        padding: 0 10px;
+      }
+      >span {
+        color: $pinkColor;
+        display: inline-block;
+      }
+    }
+  }
+}
+.md_contact {
+  margin: 40px 0;
+  @include span(24 nest);
+  border-bottom: 1px dashed #ddd;
+  >header {
+    font-size: 18px;
+    font-weight: bolder;
+    color:$pinkColor;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+}
+.pt_contact {
+  @include span(12 of 24);
+  margin-bottom: 30px;
+  >figure {
+    @include span(3 of 12);
+    img {
+      padding: 2px;
+      border:1px solid $pinkColor;
+    }
+  }
+  >div {
+    padding-left: 20px;
+    @include box-sizing(border-box);
+    @include span(9 of 12);
+    >h6 {
+      color: $purpleColor;
+      font-size: 15px;
+      background: url(../images/common/borrow.png) no-repeat left 4px;
+      padding-left: 17px;
+      @include box-sizing(border-box);
+      margin-bottom: 5px;
+      &+p {
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      padding-left: 17px;
+      @include box-sizing(border-box);
+      font-size: 13px;
+      color: #666;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.contact {
+  >h6 {
+    font-size: 17px;
+    font-weight: bolder;
+    color: $pinkColor;
+    margin-bottom: 10px;
+  }
+  >header {
+    @extend %tableHeader;
+    >p {
+      text-align: right;
+      padding-right: 25px;
+      @include box-sizing(border-box);
+    }
+  }
+  >footer {
+    @extend %tableFooter;
+  }
+}
+.contact .md_register {
+  td {
+    input {
+      width: 80%;
+    }
+  }
+  .check {
+    td {
+      text-align: left;
+    }
+    input {
+      width: 30%;
+    }
+  }
+}
+//===== RWD變版 =====
+@include breakpoint(max-width 1260px) {
+  .th_record {
+    >header {
+      li {
+        margin-right: 4px;
+        a {
+          padding: 7px 10px;
+        }
+      }
+    }
+  }
+  .th_contact {
+    >div {
+      padding: 0 10px;
+      @include box-sizing(border-box);
+    }
+  }
+  .pt_contact {
+    >figure {
+      @include span(4 of 12);
+      img {
+        width: 100%;
+      }
+    }
+    >div {
+      @include span(8 of 12);
+      padding-left: 0;
+      p {
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+//Pad 專用
+@include breakpoint(max-width 980px) {
+  .md_register {
+    td {
+      label {
+        &+p {
+          display: block;
+          padding:10px 0;
+        }
+      }
+    }
+  }
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+  .md_server {
+    tbody {
+      th, td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+      }
+      td {
+        padding-right: 5px;
+        padding-left: 5px;
+        p {
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .md_register {
+    th, td {
+      width: 100%;
+      float: left;
+      @include box-sizing(border-box);
+    }
+    th {
+      text-align: center;
+      padding: 5px 0;
+
+    }
+    td {
+      padding: 10px;
+      input {
+        padding: 5px;
+        @include box-sizing(border-box);
+        margin: 5px 0;
+      }
+      select {
+        padding: 5px 0;
+      }
+      p {
+        margin: 5px 0;
+      }
+      span {
+        label {
+          display: inline-block;
+        }
+      }
+    }
+    .mail {
+      td {
+        input {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .pt_register {
+    figure {
+      @include span(isolate 12 of 24 at 7);
+      margin-right: 100%;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    >div {
+      @include span(24);
+    }
+    li {
+      padding: 5px 0;
+    }
+  }
+  .md_member {
+    td.pt_member {
+    }
+    td.member {
+      >table {
+        width: 100%;
+        float: left;
+        th {
+          width: 30%;
+          padding: 15px 5px;
+          @include box-sizing(border-box);
+        }
+        td {
+          width: 70%;
+        }
+      }
+    }
+    >tbody {
+      >tr {
+        >th {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .th_record {
+    >header {
+      border-bottom: none;
+      // border-bottom-color: #ddd;
+      @include span(24);
+      margin-bottom: 0;
+      ul {
+      }
+      li {
+        @include span(24);
+        margin-bottom: 5px;
+        a {
+          @include span(24 nest);
+          font-size: 14px;
+          display: block;
+          padding: 10px 0;
+          text-align: center;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+  }
+  .md_record {
+    >thead {
+      display: none;
+    }
+    >tbody {
+      td {
+        width: 100%;
+        float: left;
+        display: block;
+        position: relative;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+          position: relative;
+          padding-top: 40px;
+          padding-bottom: 10px;
+          &:before {
+            content: "邀約時間";
+            display: block;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #F9DDE7;
+            color: #777;
+          }
+        }
+        &:nth-child(1){
+          margin-top: 30px;
+        }
+        &:nth-child(2) {
+          &:before {
+            content: "對象";
+          }
+        }
+        &:nth-child(3) {
+          &:before {
+            content: "回覆結果";
+          }
+        }
+        &:nth-child(4) {
+          &:before {
+            content: "回覆時間";
+          }
+        }
+        &:nth-child(5) {
+          &:before {
+            content: "排約時間地點";
+          }
+        }
+        &:nth-child(6) {
+          margin-bottom: 20px;
+          &:before {
+            content: "管理員回覆";
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    .md_register {
+      td {
+        text-align: center;
+      }
+      .check {
+        td {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .pt_contact {
+    @include span(24);
+    >div {
+
+    }
+  }
+}

@@ -1,0 +1,377 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "reset";
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+html, body {
+  width: 100%;
+  min-width: $mainWidth;
+}
+
+//===== PC版 =====
+
+body {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+a {
+  color: $darkColor;
+  &:hover {
+    color: $greenColor;
+  }
+}
+#wrap {
+  @extend %block;
+}
+#header {
+  @extend %clear;
+  @extend %wordFamily;
+}
+.header_content {
+  @include span(24 nest);
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+  h1 {
+    display: inline-block;
+    float: left;
+  }
+
+  .menu {
+    float: right;
+    display: none;
+    margin-top: 10px;
+    display: inline-block;
+    width: 50px;
+    display: none;
+    img {
+      width: 100%;
+    }
+  }
+}
+.choose {
+  float: right;
+  padding-top: 16px;
+  li {
+    float: left;
+    position: relative;
+    >a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      text-align: center;
+      img {
+        width: 25px;
+        display: inline-block;
+      }
+    }
+    &:hover {
+      div {
+        display: block;
+      }
+    }
+  }
+  div {
+    background-color: $darkColor;
+    padding:30px 20px;
+    position: absolute;
+    top: 38px;
+    right: 0;
+    z-index: 5;
+    width: 230px;
+    @extend %clear;
+    display: none;
+    input {
+      float: left;
+      height: 25px;
+      width: 150px;
+      padding: 0 5px;
+      border:none;
+      @include box-sizing(border-box);
+    }
+    .search {
+      font-size: 12px;
+      color: $lightColor;
+      height: 25px;
+      float: left;
+      display: inline-block;
+      background-color: $greenColor;
+      text-decoration: none;
+      text-transform:uppercase;
+      padding-right: 10px;
+      padding-left: 10px;
+      line-height: 25px;
+      letter-spacing: 1px;
+      @include box-sizing(border-box);
+    }
+    .close {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 36px;
+      height: 26px;
+      margin-left: -18px;
+    }
+  }
+  .hasInput {
+    width: 40px;
+    height: 40px;
+    &:hover {
+      background-color: $darkColor;
+      >a {
+        background: url(../images/icon_03.png) no-repeat;
+        background-size:30px;
+        background-position: center;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+#footer {
+  @include span(24 nest);
+  @extend %word;
+  background-color: $lightColor;
+  position: relative;
+  padding-top: 100px;
+  >header {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .footer_content {
+    background-color: $greenColor;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 167px;
+    >ul {
+      @extend %clear;
+      >li {
+        width: 250px;
+        height: 145px;
+        border-left: 1px solid $lightColor;
+        float: left;
+        padding-left: 20px;
+        >a {
+          font-size: 18px;
+          color: $lightColor;
+          text-decoration: none;
+          display: inline-block;
+          margin-bottom: 15px;
+          strong {
+            color: inherit;
+            font-size: inherit;
+            font-weight: bolder;
+          }
+        }
+        ul {
+          li {
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 5px;
+            color: $lightColor;
+            &:before {
+              content: "";
+              display: block;
+              width: 3px;
+              height: 3px;
+              background-color: $lightColor;
+              position: absolute;
+              top: 8px;
+              left: 0;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+        p {
+          color: $lightColor;
+        }
+      }
+    }
+  }
+  .choose {
+    display: none;
+  }
+}
+nav {
+  @extend %word;
+  @include span(24 nest);
+  background-color: $lightColor;
+  box-shadow: 2px 2px 15px #999;
+  position: relative;
+  z-index: 2;
+  ul {
+    @extend %clear;
+    padding: 0 $gutter;
+  }
+  li {
+    float: left;
+    margin: 0 20px;
+    a {
+      @include adjust-font-size-to(nth($font-list, 4));
+      text-decoration: none;
+      display: inline-block;
+      padding: 5px 0 5px;
+      border-top: 5px solid $lightColor;
+      &:hover {
+        color: $greenColor;
+        border-top: 5px solid $greenColor;
+      }
+    }
+    &.on {
+      a {
+        color: $greenColor;
+        border-top: 5px solid $greenColor;
+        
+      }
+    }
+  }
+}
+.main_content {
+  background-color: $lightColor;
+  @include span(24 nest);
+}
+
+.top {
+  @extend %top;
+}
+//===== RWD變版 =====
+
+//非 IE8 專用
+@include breakpoint(0px) {
+  html, body {
+    min-width: 320px
+  }
+}
+//Pad 專用
+@include breakpoint(max-width 1000px) {
+  nav {
+    box-shadow: none;
+    position: absolute;
+    top: 93px;
+    left: 0;
+    z-index: 5;
+    display: none;
+    ul {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    li {
+      float: none;
+      margin: 0;
+      &+li {
+        border-top: 1px solid #b5b5b5;
+      }
+      a {
+        width: 100%;
+        border-top: none;
+        padding: 10px 0;
+        position: relative;
+        &:hover {
+          border-top: none;
+          background-color: $greenColor;
+          color: $lightColor;
+          text-indent: 10px;
+          &:after {
+            border-left-color: $lightColor;
+          }
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border:6px solid transparent;
+          border-left: 10px solid $greenColor;
+          position: absolute;
+          top: 15px;
+          right: 10px;
+        }
+      }
+    }
+  }
+  .choose {
+    display: none;
+  }
+  .header_content {
+    box-shadow: 0px 4px 15px #999;
+    position: relative;
+    z-index: 6;
+    padding-right: 20px;
+    padding-left: 20px;
+    @include box-sizing(border-box);
+    background-color: $lightColor;
+    .menu {
+      display: block;
+    }
+  }
+
+  #footer {
+    .footer_content {
+      padding-right: 50px;
+      padding-left: 50px;
+      @include box-sizing(border-box);
+      >ul {
+        >li {
+          display: none;
+          height: auto;
+        }
+        .copyright {
+          display: block;
+          float: right;
+          width: auto;
+        }
+      }
+    }
+    .choose {
+      display: block;
+      float: left;
+      li {
+        float: left;
+      }
+    }
+  }
+}
+//Phone 專用
+@include breakpoint(max-width 500px) {
+  #footer {
+    .footer_content {
+      padding-right: 10px;
+      padding-left: 10px;
+      >ul {
+        .copyright {
+          padding-left: 0;
+          border-left: none;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .choose {
+      margin-bottom: 10px;
+      float: none;
+      ul {
+        white-space: nowrap;
+        text-align: center;
+      }
+      li {
+        float: none;
+        display: inline-block;
+      }
+    }
+  }
+    
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>醬玩東南亞,$10,000旅遊金,萬元週週抽</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <nav>
+            <ul>
+                <li><a href="lion.html">百人壯遊</a></li>
+                <li><a href="bonus.html">加值不加價</a></li>
+                <li><a href="honeymoon.html">蜜月旅行</a></li>
+                <li><a href="history.html">歷史巡禮</a></li>
+                <li><a href="food.html">美食美景</a>
+                    <ul>
+                        <li><a href="food.html">當地風味美食.名店</a></li>
+                        <li><a href="view.html">東南亞五大海島</a></li>
+                    </ul>
+                </li>
+                <li class="week"><a href="week.html">週週<strong>抽萬元</strong><img src="images/week.png"></a></li>
+            </ul>
+        </nav>
+        <div class="header_index" style="background-image:url(images/index-bg.png)">
+            <h1><img alt="醬玩東南亞,$10,000旅遊金,萬元週週抽" src="images/index.png"></h1>
+            <a href="#" class="menu"><span>Menu</span></a>
+            <a href="#" id="topBt">TOP</a>
+        </div>
+        <div id="main">
+            <main>
+                <div class="th_index">
+                    <div class="topNav">
+                        <ul>
+                            <li><a href="#a01">活動辦法</a></li>
+                            <li><a href="#a02">登錄抽獎</a></li>
+                            <li><a href="#a03">活動贈品</a></li>
+                            <li><a href="#a04">得獎名單</a></li>
+                            <li><a href="#a05">注意事項</a></li>
+                        </ul>
+                    </div>
+                    <div class="md_index">
+                        <a id="a01" name="a01"></a>
+                        <h3>活動辦法:</h3>
+                        <h5>參加東南亞指定行程，週週抽萬元旅遊金，越早報名機會越大喔~</h5>
+                        <p>於活動期間 2015/9/4~2015/12/25內，報名『醬玩東南亞 萬元旅遊金週週抽』活動內之指定行程並完成付款者，於活動網站登錄
+                        <strong>姓名、訂單編號、聯絡電話、電子郵件…等報名相關資訊</strong>
+                        ，就可抽雄獅萬元抵用劵，越早報名得獎機會越大喔~</p>
+                    </div>
+                    <div class="md_index">
+                        <a id="a02" name="a02"></a>
+                        <div>
+                            <h3>登錄抽獎:</h3>
+                            <p>報名下單後，業務人員會經由E-Mail、簡訊提供訂單編號， 並請於活動網站登錄<strong>報名姓名、訂單編號、聯絡電話、電子郵件</strong>等報名相關資訊</p>
+                            <span>(以下欄位均為必填，您的資料僅供本抽獎活動使用!)</span>
+                            <ul>
+                                <li>
+                                    <label>姓名:</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label>訂單編號:</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label>聯絡電話:</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label>Email:</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label>旅遊地區:</label>
+                                    <input type="text">
+                                </li>
+                            </ul>
+                            <div class="sendOut">
+                                <a href="#">確認送出</a>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="images/money.png">
+                        </figure>
+                    </div>
+                    <div class="md_index">
+                        <a id="a03" name="a03"></a>
+                        <h3>活動贈品:</h3>
+                        <p>雄獅抵用劵10,000元旅遊金 (每週1名，共12名)</p>
+                        <span>註：本劵可抵用雄獅旅遊網銷售之國外旅遊團體行程，僅限於直接向雄獅旅行社報名時使用，使用時不得折換現金或找零。★ 詳細使用辦法，依劵面說明為主。</span>
+                        <footer>
+                            <img src="images/10000.jpg"><img src="images/gift.png">
+                        </footer>
+                    </div>
+                    <div class="md_index">
+                        <a id="a04" name="a04"></a>
+                        <h3>得獎名單:</h3>
+                        <p>每週透過電腦系統隨機抽獎，自活動登錄名單中抽出得獎者，並於活動網頁公布。12週得獎者統一於活動結束後2015/12/31前，以電子郵件方式通知得獎人中獎訊息，活動參加者請密切注意活動網頁以及您於所登錄之電子信箱。</p>
+                        <ul class="winnerList">
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第一週</p>
+                                <span>白子畫</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第二週</p>
+                                <span>花牽罟</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第三週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第四週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第五週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第六週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第七週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第八週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第九週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第十週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第十一週</p>
+                                <span>敬請期待</span>
+                            </li>
+                            <li>
+                                <span>10<strong>/8</strong></span>
+                                <p>第十二週</p>
+                                <span>敬請期待</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md_index">
+                        <a id="a05" name="a05"></a>
+                        <h3>注意事項:</h3>
+                        <ol class="notice">
+                            <li>參加者於參加本活動之同時，即同意接受本活動之活動辦法與注意事項之規範，如有違反者得取消其參加或得獎者資格。</li>
+                            <li>參加者了解並同意提供個人資料予主辦單位，主辦單位將遵循「個人資料保護法」之規定，於本活動之特定目的範圍內蒐集，處理及利用您的個人資料。您有權透過活動主辦單位連絡信箱提出要求使用、更正、補充、刪除您所提供之個人資料，惟活動結束前提出刪除個人資料者，視同放棄參加本活動。【如欲進一步了解雄獅集團個人資料保護相關內容可參閱雄獅旅遊網隱私權保護政策頁面  http://www.liontravel.com/info/notice/orderinfo/privacy.asp</li>
+                            <li>消費者需報名『醬玩東南亞 萬元旅遊金週週抽』活動內之指定行程，若有付款失敗、訂單取消、未出團者，該筆訂單即不符贈獎與抽獎資格，雄獅旅遊有權要求消費者退回完整之贈品或獎項。
+                            <li>每一筆訂單編號僅具有一次登錄及抽獎機會，不可重覆、修改。當週未中獎之訂單編號可繼續參加抽獎，不需再重複登錄。
+                            <li>「萬元旅遊金」獎項將於每週由主辦單位自登錄名單中抽出得獎者，並於活動網頁公布得獎名單，活動總計12週之得獎者將統一於2015/12/31前，以電子郵件方式通知得獎人中獎訊息，活動參加者請密切注意活動網頁以及您於所登錄之電子信箱。</li>
+                            <li>參加者應詳實填寫登錄資料，若因資料填寫不完整或不正確導致無法通知中獎者，將視同自願放棄領獎資格，獎項不另行補發。</li>
+                            <li>得獎人請依中獎通知於指定時間前，詳實回覆個人基本資料進行得獎資格審核，如有資料填寫未完整或不實者，將視同放棄得獎權利。如因得獎人填寫之寄送地址有誤、無法辨識、不完整或損毀之情況，導致雄獅旅遊無法正確寄送相關活動贈品時，恕不補發贈品或補償。【請注意：通知信件可能會被信箱歸類於垃圾/促銷信件。】</li>
+                            <li>依所得稅法規定，機會中獎之獎項價值若超過NT$1,000，所得將列入個人年度綜合所得稅申報，若獎品價值總額超過NT$20,000，必須代扣10%中獎獎金稅額；非中華民國國境內居住之國人(即在中華民國境內居住未達183天之本國人及外國人)不論得獎人所得之金額，須就中獎所得扣繳20%機會中獎稅。扣繳稅款未超過NT$2,000，免扣繳(外籍人士不適用)。若得獎人經主辦單位通知拒絕繳納代扣稅額，視為得獎者放棄得獎權益，亦不再進行得獎名單遞補。</li>
+                            <li>本活動所有贈品僅限郵寄至台、澎、金、馬地區。</li>
+                            <li>雄獅抵用券限得獎人本人使用，限壹次抵用完畢不可分次使用，且此券為贈品券抵用時恕無法找零，不得折換現金，一經抵用後本券恕無法退換，須於有效期限內兌換，逾其視同放棄兌獎權益，恕無法向雄獅旅遊請求展延使用期限。</li>
+                            <li>持券人可自行選擇雄獅旅遊國外團體旅遊商品(包含日本、韓國、東南亞、大陸、關島、帛琉、歐洲、南亞中東、美加、紐澳行程等，詳細旅遊商品內容及費用請參閱雄獅旅遊官網)，惟不得抵用無記名票券商品及護照代辦費、簽證費、小費、旅遊平安險、北高接駁費及領隊小費與個人開銷之費用(如行李超重費、自選行程費用等)。更多詳細兌換使用規則請詳閱抵用券。</li>
+                            <li>得獎人應妥善保管本券，若有遺失、被竊、毀損或喪失兌換券之占有，恕無法給予補發。</li>
+                            <li>得獎人得向雄獅旅遊各門市及分公司之服務人員抵用，惟不得透過旅遊同業抵用。</li>
+                            <li>本優惠得與雄獅其他行銷方案、銀行優惠合併使用。</li>
+                            <li>雄獅旅遊及其關係企業員工將不具本活動參與資格。</li>
+                            <li>參加本活動者應保證所填寫或提出之資料均為真實且正確，且未冒用或盜用任何第三人之資料。如有不實或不正確之情事，將取消參加本活動資格及得獎資格。且如有致主辦單位或任何第三人受有損害，亦由參加本活動者負擔賠償責任。</li>
+                            <li>凡參加者即視同同意接受本注意事項之各項規定，如有違反本注意事項，主辦單位有權取消其得獎資格，並對於任何破壞本活動之行為保留法律追訴權。</li>
+                            <li>如有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而使參加者所寄出或登錄之資料有遲延、遺失、錯誤、無法辨識或毀損之情況，主辦單位不負任何法律責任，參加本活動者亦不得因此異議。</li>
+                            <li>主辦單位有權保留對本活動網站、活動規則、獎項、抽獎時間及得獎公佈的修改權利，並公佈於網站上不再另行通知。若有其他未盡事宜，則以本單位最終公告之說明為準。</li>
+                            <li>若於活動期間有任何問題，請透過e-mail方式與雄獅旅遊活動小組(friedachen@liontravel.com )連絡。</li>
+                        </ol>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/act.js" type="text/javascript"></script>

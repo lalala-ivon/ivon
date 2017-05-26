@@ -1,0 +1,415 @@
+@charset "utf-8";
+@import "compass/reset";
+img{
+    display: block;
+}
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+$font-list: 12px 14px 18px 20px 22px 24px 28px 38px 16px;
+$base-font-size: nth($font-list, 2);
+$base-line-height: 10px;
+$rhythm-unit: 'px';
+
+$mainWidth:960px;
+$darkColor:#000;
+$lightColor:#FFF;
+$ygColor:#c8e02a;
+$pinkColor:#d40c52;
+$redColor:#dc3b31;
+
+// $susy: ( columns:24, math:fluid, gutters:1/3, gutter-position:split, debug: (image: show));
+// $gutter: 10px;
+$susy: ( columns:24, math:fluid, gutters:1, gutter-position:split);
+$gutter:20px;
+
+
+
+%indent {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+%decoration {
+    display: block;
+    text-decoration: none;
+}
+%block {
+    @include container();
+    max-width: $mainWidth;
+}
+%vertical-outer {
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px;
+        height: 100%;
+        content: "";
+        visibility: hidden;
+    }
+}
+%vertical-inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%inline-outer {
+  letter-spacing: -4px; //可能需要微調
+  // word-spacing: -4px;
+  font-size: 0;
+}
+%inline-inner {
+  letter-spacing: normal; //可能需要微調
+  // word-spacing: normal;
+  display:inline-block;
+  *display: inline;
+  zoom:1;
+}
+%clear {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin image-block($path, $cache:false) {
+    @extend %indent;
+    background-image: image-url($path,false,$cache);
+    width: image-width($path);
+    height: image-height($path);
+    background-repeat: no-repeat;
+}
+
+html{
+  *, *:before, *:after {
+    //@include user-select(none);
+    @include adjust-font-size-to($base-font-size);
+    color: $darkColor;
+    font-family: "Century Gothic", "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif";
+    //verdana
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: $mainWidth \9;
+  background-color: #f1ece6;
+}
+
+//===== PC版 =====
+
+#wrap {
+  background: url(../images/bg-sea.jpg) no-repeat center top;
+  padding-bottom: rhythm(2);
+  padding-top: rhythm(7);
+}
+.menu {
+    width: 30px;
+    height: 28px;
+    padding: 10px 5px 0 10px;
+    background-color: $ygColor;
+    border: 2px solid #fff;
+    // @include box-sizing(border-box);
+    @include border-radius(4px);
+    position: fixed;
+    z-index: 20;
+    top: 20px;
+    left: 20px;
+    display: none;
+    &:before, &:after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+    }
+    &:after {
+        top: 24px;
+    }
+    span {
+        @extend %indent;
+        background-color:#fff;
+        width: 25px;
+        height: 3px;
+        position: absolute;
+        top: 17px;
+    }
+}
+
+main {
+  @extend %block;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  height: rhythm(7);
+  background-color: $ygColor;
+  ul {
+    text-align: center;
+    // @extend %inline-outer;
+  }
+  li {
+    display: inline-block;
+    // @extend %inline-inner;
+    line-height: rhythm(7);
+    @include border-radius(20px);
+    @include box-sizing(border-box);
+    position: relative;
+    &:hover {
+      ul {
+        display: block;
+        background-color: none;
+      }
+    }
+    &.on {
+      >a {
+        border: 2px solid #222;
+        &:hover {
+          border: 2px solid #222;
+        }
+      }
+    }
+    a {
+      padding: 0 20px;
+      display: inline-block;
+      @include adjust-font-size-to(nth($font-list, 3), 3);
+      text-decoration: none;
+      border: 2px solid $ygColor;
+      @include border-radius(20px);
+      @include box-sizing(border-box);
+      &:hover {
+        border: 2px solid #222;
+        @include border-radius(20px);
+        @include box-sizing(border-box);
+      }
+    }
+    ul {
+      position: absolute;
+      top: 60px;
+      left: -28px;
+      width: 170px;
+      background-color: #fff;
+      @include border-radius(10px);
+      display: none;
+      &:before {
+        content:"";
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: 80px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 10px 6px;
+        border-color: transparent transparent #fff transparent;
+      }
+      li {
+        line-height: rhythm(1);
+        &+li {
+          border-top: 1px solid $ygColor;
+          @include border-radius(0);
+        }
+        a {
+         @include adjust-font-size-to(nth($font-list, 2), 3);
+          width: 170px;
+          display: inline-block;
+          border: none;
+          @include border-radius(0);
+          &:hover {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+.week {
+  a {
+    background-color: $redColor;
+    color: $ygColor;
+    border:2px solid $redColor;
+    img {
+      float: right;
+    }
+    &:hover {
+      border:2px solid $redColor;
+    }
+  }
+  strong {
+    @include adjust-font-size-to(nth($font-list, 5));
+    color: $ygColor;
+    font-weight: bolder;
+  }
+  &.on {
+    a, a:hover {
+      border-color: $redColor;
+    }
+  }
+}
+
+#topBt {
+    position: fixed;
+    right: 20px;
+    bottom: -50px;
+    display: block;
+    width: rhythm(5);
+    height: rhythm(5);
+    z-index: 50;
+    @include border-radius(50%);
+    @extend %indent;
+    text-decoration: none;
+    background: #000;
+    @include transition(bottom, 1s);
+    &:before, &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 12px 16px 12px;
+        position: absolute;
+        left: 13px;
+    }
+    &:before {
+        border-color: transparent transparent #fff transparent;
+        top: 14px;
+    }
+    &:after {
+        border-color: transparent transparent #000 transparent;
+        top: 18px;
+    }
+}
+.fixed {
+  #topBt {
+    bottom: 20px;
+  }
+}
+//===== RWD變版 =====
+
+//非 IE8 專用
+@include breakpoint(0px) {
+  html, body {
+    min-width: 320px
+  }
+}
+//Pad 專用
+@include breakpoint(max-width 980px) {
+  #wrap {
+    padding-top: 0;
+    background-size:cover;
+    background-position: center top;
+  }
+  nav {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    ul {
+    }
+    li {
+      line-height: rhythm(5);
+      width: 100%;
+      @include border-radius(0);
+      &+li {
+         border-top: 1px solid #fff;
+      }
+      &.on {
+        background-color: #333;
+        >a {
+          border: none;
+          color: #fff;
+          &:hover {
+            border: none;
+          }
+        }
+      }
+      a {
+        display: inline-block;
+        width: 100%;
+        border: none;
+        padding: 0;
+        &:hover {
+          border: none;
+        }
+      }
+      ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: auto;
+        margin-bottom: rhythm(1);
+        display: block;
+        li {
+          border: none;
+          a {
+            line-height: rhythm(5);
+          }
+          &+li {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    display: block;
+  }
+  .week {
+    margin-top: rhythm(1);
+    border: none;
+    a {
+      width: 170px;
+      position: relative;
+      text-indent: -20px;
+      line-height: rhythm(5);
+      img {
+        position: absolute;
+        top:rhythm(1);
+        right: rhythm(2);
+      }
+    }
+  }
+  .actMenu {
+    overflow: hidden;
+    nav {
+      display: block;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    #wrap {
+      position: relative;
+      left: 180px;
+    }
+    .menu {
+      left:190px;
+      &:before{
+        @include rotate(-45deg);
+        margin-top: 0px;
+        top: 18px;
+      }
+      &:after {
+        @include rotate(45deg);
+        top:18px;
+      }
+      span {
+          display: none;
+      }
+    }
+  }
+
+}
+//Phone 專用
+@include breakpoint(max-width 720px) {
+  #wrap {
+    background-size: contain;
+  }
+}

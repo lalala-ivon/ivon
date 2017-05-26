@@ -1,0 +1,1427 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+@import "var";
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-width: 960px;
+    *, *:before, *:after {
+        //@include user-select(none);
+        color: $darkColor;
+        font-family:"xingothic-w3", "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif";
+        //verdana
+    }
+}
+body {
+    margin:0;
+    padding: 35px 0 0 0;
+}
+#wrap {
+    background: url(../images/bg.gif) repeat;
+    // margin-top: 35px;
+}
+.header_content {
+    background: url(../images/headerBg.jpg) repeat-x center 0;
+    h1 {
+        @extend %block;
+        height: 285px;
+        text-align: center;
+        position: relative;
+        @extend %vertical-outer;
+        &:before {
+            vertical-align: bottom;
+        }
+        a {
+            @extend %vertical-inner;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    
+}
+.header_tour {
+    background: url(../images/headerBgTour.gif) repeat-x center 0;
+}
+.header_reco {
+    background: url(../images/recommendBg.jpg) repeat-x center 0;
+}
+.menu {
+    width: 30px;
+    height: 28px;
+    padding: 10px 5px 0 10px;
+    background-color: $redColor;
+    @include border-radius(4px);
+    position: fixed;
+    z-index: 20;
+    top: 20px;
+    left: 20px;
+    display: none;
+    &:before, &:after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+    }
+    &:after {
+        top: 24px;
+    }
+    span {
+        @extend %indent;
+        background-color:#fff;
+        width: 25px;
+        height: 3px;
+        position: absolute;
+        top: 17px;
+    }
+}
+.nav {
+    width: 100%;
+    background: $greenColor;
+    text-align: center;
+    position: relative;
+    vertical-align: top;
+    a {
+        text-decoration: none;
+    }
+}
+.firstNav {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    >li {
+        padding: 0;
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 7), 3);
+        &+li {
+            &:before {
+                content: "|";
+                display: inline;
+                @include adjust-font-size-to(nth($font-list, 1), 0);
+                color: #fff;
+                padding-right: 4px;
+            }
+        }
+        &:hover {
+            padding-bottom: rhythm(3);
+            >a {
+                background: $yellowColor;
+                @include border-radius(4px);
+                @include box-sizing(border-box);
+                color: #333;  
+            }
+            ul.secNav {
+                display: block;
+            }
+        }
+        >a {
+            color: #fff;
+            line-height: rhythm(1.5);
+            padding: 0 4px;
+            display: inline-block;
+        }
+    }
+    // .on {
+    //     &:hover {
+    //         padding-bottom: rhythm(3);
+    //         >a {
+    //             padding-bottom: 10px;
+    //             @include border-radius(4px 4px 0 0);
+    //             line-height: rhythm(2);
+    //         }
+    //     }
+    // }
+}
+.secNav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    // bottom: 0;
+    z-index: 2;
+    background-color: $yellowColor;
+    display: none;
+    >li {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 7), 3);
+        position: relative;
+        &:hover {
+            >a {
+                background: $greenColor;
+                @include border-radius(4px);
+                @include box-sizing(border-box);
+                color: #fff;            }
+            ul.thirdNav {
+                display: block;
+            }
+        }
+        >a {
+            color: #333;
+            line-height: rhythm(1.5);
+            padding: 0 5px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+}
+.thirdNav {
+    position: absolute;
+    z-index: 99;
+    top: 50px;
+    left: 50%;
+    width: 290px;
+    background:$greenColor;
+    padding:0 5px;
+    margin: auto;
+    // 退總寬度的一半
+    margin-left: -150px;
+    display: none;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8px;
+        left: 145px;
+        z-index: 8;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 10.4px 6px;
+        border-color: transparent transparent$greenColor transparent;
+    }
+    >li {
+        display: inline-block;
+        &:hover {
+            a {
+                color: $yellowColor;
+            }
+        }
+        a {
+            display: block;
+            padding: 0 3px;
+            color: #fff;
+        }
+    }
+}
+
+li.bt_newyear {
+    &:hover {
+        padding-bottom: 0;
+        a {
+            background-color: $yellowColor;
+            color: #333;
+            &:after {
+                border-top-color: #b5a200;
+            }
+        }
+    }
+     a {
+        background: $redColor;
+        @include border-radius(4px);
+        @extend %boxShadow;
+        text-indent: 0;
+        &:after {
+            border-top-color: #a6092a;
+        }
+        &.active {
+        }
+    }
+}
+
+#topBt {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: block;
+    width: rhythm(2);
+    height: rhythm(2);
+    line-height: rhythm(2.5);
+    z-index: 50;
+    @include border-radius(8px);
+    background-color: $redColor;
+    color: $whiteColor;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid #fff;
+    // display: none;
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8px 10px 8px;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        top: 4px;
+        left: 13px;
+    }
+}
+.md_sitemap {
+    background-color: $grayColor;
+}
+.sitemap {
+    padding: rhythm(0.5);
+    @extend %block;
+    @include box-sizing(border-box);
+    @extend %inline-outer;
+    h6 {
+        display: inline-block;
+        text-align: center;
+        background-color: #ccc;
+        padding:4px 10px;
+        @include box-sizing(border-box);
+        @include border-radius(4px);
+        @extend %inline-inner;
+        @include adjust-font-size-to(nth($font-list, 1), 1);
+    }
+    span {
+        // background-color: red;
+        @extend %inline-inner;
+        margin-left: rhythm(.5);
+        @include adjust-font-size-to(nth($font-list, 1), 1);
+        &+span {
+            margin-left: 0;
+            &:before {
+                content: ">";
+                display: inline-block;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+    }
+    ul {
+        display: inline-block;
+        background-color: $yellowColor;
+        @extend %inline-inner;
+        @include adjust-font-size-to(nth($font-list, 1), 1);
+        padding: 6px;
+        position: relative;
+        margin-left: 20px;
+        &:before {
+            content: ">";
+            display: inline-block;
+            padding-left: 4px;
+            margin-right: 20px;
+            position: absolute;
+            left: -20px;
+        }
+        li {
+            display: inline-block;
+            &+li {
+                &:before {
+                    content: "|";
+                    display: inline-block;
+                    font-size: 14px;
+                    padding-right: 4px;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            &.on {
+                a {
+                    color: $redColor;
+                }
+            }
+        }
+    }
+}
+.md_main {
+    @extend %block;
+    margin-top: rhythm(1);
+}
+.aside {
+    @include span (8);
+}
+.aside {
+    .header {
+        @extend %Box-outer;
+        margin-bottom: -15px;
+        h4 {
+            @extend %Box-inner;
+            background: url(../images/point.png);
+            padding: 6px 10px;
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }    
+    }
+}
+
+.R_bannerBox {
+    @extend %Box-outer;
+    .R_banner {
+        @extend %Box-inner;
+        background-color: $whiteColor;
+        &:before, &:after {
+            background-color: $whiteColor;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+}
+.give {
+    .header {
+        h4 {
+            background-color: #ff3b3c;
+            &:before, &:after {
+                background-color: #ff3b3c;
+            }
+        }    
+    }
+}
+.dressed {
+    .header {
+        h4 {
+            background-color: #3ebb45;
+            &:before, &:after {
+                background-color: #3ebb45;
+            }
+        }    
+    }
+}
+.forecast {
+    .header {
+        h4 {
+            background-color: #ecae49;
+            &:before, &:after {
+                background-color: #ecae49;
+            }
+        }    
+    }
+}
+.view {
+    .header {
+        h4 {
+            background-color: #616bff;
+            &:before, &:after {
+                background-color: #616bff;
+            }
+        }    
+    }
+}
+.fixed {
+    .nav {
+        position: fixed;
+        position: relative\9;
+        top: 35px;
+        z-index: 25;
+        >ul {
+            >li {
+                &.mm {
+                    &.active {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+        .secNav {
+            display: none;
+        }
+    }
+    #topBt {
+        display: block;
+    }
+}
+
+.main {
+    @include span (16);
+    float: right;
+    .BoxWrap {
+        @extend %Box-outer;
+    }
+    .Box_Content {
+        @extend %Box-inner;
+    }
+}
+
+.topBanner {
+    @extend %clear;
+    h6 {
+        @extend %Box-outer;
+        @include span(8 of 16);
+    }
+    a {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 4), 3.5);
+        font-weight: bold;
+        text-align: center;
+        @include span(8 of 8);
+        text-decoration: none;
+        // padding: 6px;
+        @extend %Box-inner;
+        background-color: $yellowColor;
+        &:before, &:after {
+            background-color: $darkColor;
+        }
+        img {
+            display: none;
+            padding-left: 5px;
+        }
+        &.on {
+            background-color: #57cff0;
+            img {
+                // display: block;
+                display: inline;
+                vertical-align: middle;
+            }
+        }
+        span {
+            display: block;
+            position: relative;
+            border: 6px solid #fff;
+            @include box-sizing(border-box);
+            background: url(../images/point-.png);
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border: 2px solid #000;
+            }
+        }
+    }
+}
+.Box_header {
+    @extend %Box-outer;
+    z-index: 1;
+    margin-bottom: -15px;
+    h4 {
+        @extend %Box-inner;
+        @include adjust-font-size-to(nth($font-list, 2), 2);
+        padding: 0 rhythm(0.5);
+        font-weight: bold;
+        background-color: #ccc;
+        &:before, &:after {
+        background-color: #ccc;
+        }
+    }
+}
+// 活動說明
+.activity {
+    position: relative;
+    @include span(16 of 16);
+    padding-top: rhythm(1.5);
+    // padding-left: rhythm(1);
+    h5 {
+        @extend %Box-outer;
+        margin-bottom: 0;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        position: absolute;
+        top:0px;
+        left: 0px;
+        z-index: 8;
+        @include span(4 of 16 nest);
+        span {
+            display: block;
+            text-align: center;
+            font-weight: bolder;
+            @include adjust-font-size-to(nth($font-list, 4), 2);
+            // height: rhythm(2);
+            @extend %Box-inner;
+            color: $whiteColor;
+            border-color: $whiteColor;
+            background-color: $darkColor;
+            &:before, &:after {
+                border-color: $whiteColor;
+                background-color: $darkColor;
+            }
+            &:before {
+                height: 6px;
+            }
+            &:after {
+                width: 6px;
+            }
+        }
+    }
+    .BoxWrap {
+        @include span(15 of 16 nest);
+        float: right;
+    }
+    .Box_Content {
+        padding: rhythm(1);
+        padding-top: rhythm(1.5);
+        @include box-sizing(border-box);
+        background-color: $yellowColor;
+        &:before, &:after {
+            background-color: $yellowColor;
+        }
+    }
+    p {
+        @include adjust-font-size-to(nth($font-list, 2), 1.5);
+        font-weight: bold;
+        margin-bottom: rhythm(1);
+    }
+}
+// 星座預測
+.star {
+    @include span(16 of 16);
+    .Box_Content {
+        background-color: $whiteColor;
+        padding: rhythm(1);
+        @include box-sizing(border-box);
+        &:before, &:after {
+        background-color: $whiteColor;
+        }
+    }
+}
+.figureBox {
+    margin-top: rhythm(.5);
+    @extend %clear;
+    .figure {
+        @include span(8 of 16 nest);
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+    .figcaption {
+        @include adjust-font-size-to(nth($font-list, 4), 2);
+        color: $darkColor;
+    }
+
+}
+// 本月主打星
+.special {
+    position: relative;
+    @include span(16 of 16);
+    .Box_Content {
+        padding: rhythm(1);
+        @include box-sizing(border-box);
+        background-color: $yellowColor;
+        &:before, &:after {
+        background-color: $yellowColor;
+        }
+    }
+}
+.special_word {
+    @extend %clear;
+    .figure {
+        @include span (6 of 16 nest);
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+    .specialBox {
+        display: block;
+        text-decoration: none;
+        @include span (10 of 16 nest);
+        h6 {
+            @include adjust-font-size-to(nth($font-list, 4), 1.5);
+            font-weight: bold;
+            border-bottom: 1px solid #333;
+            margin-bottom: rhythm(.5);
+        }
+        p {
+            @include adjust-font-size-to(nth($font-list, 3), 1.5);
+            color: #333;
+            margin-bottom: rhythm(.5);
+        }
+        span {
+            display: block;
+            text-align: right;
+            font-weight: bolder;
+            color: $redColor;
+            @include adjust-font-size-to(nth($font-list, 2), 1);
+            strong {
+                font-family: "Century Gothic";
+                color: $redColor;
+                @include adjust-font-size-to(nth($font-list, 6), 1);
+            }
+        }
+    }
+}
+// 行程
+.tourBox {
+    position: relative;
+    @include span(16 of 16);
+    >a {
+        position: absolute;
+        top: -165px;
+        width: 0px;
+        height: 0px;
+        // z-index: 100;
+    }
+    .Box_Content {
+        background-color: $whiteColor;
+        &:before, &:after {
+        background-color: $whiteColor;
+        }
+        >div + div {
+            border-top: 2px solid #000;
+        }
+    }
+}
+.tourContent {
+    padding: rhythm(1);
+    @include box-sizing(border-box);
+    h6 {
+        @include adjust-font-size-to(nth($font-list, 2), 1);
+        border-bottom: 1px dashed #000;
+        padding-bottom: rhythm(.25);
+        margin-bottom: rhythm(.5);
+        a {
+            text-decoration: none;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    ul {
+        li {
+            @include adjust-font-size-to(nth($font-list, 1), 1);
+            color: $redOrange;
+        }
+    }
+    span {
+        display: block;
+        text-align: right;
+        font-weight: bolder;
+        color: $redColor;
+        margin-top: rhythm(.5);
+        @include adjust-font-size-to(nth($font-list, 2), 1);
+        strong {
+            font-family: "Century Gothic";
+            color: $redColor;
+            @include adjust-font-size-to(nth($font-list, 4), 1);
+        }
+    }
+}
+// 買就送
+.coupon {
+    @extend %clear;
+    .figure {
+        @include span(6 of 16);
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.couponWord {
+    @include span(10 of 16);
+    h6 {
+        background-color: $whiteColor;
+        @include adjust-font-size-to(nth($font-list, 3), 1.5);
+        font-weight: bolder;
+        padding: 0 5px;
+        margin-bottom: rhythm(.25);
+    }
+}
+// 買再抽
+.lotteryBox {
+    h6 {
+        background-color: $whiteColor;
+        @include adjust-font-size-to(nth($font-list, 3), 1.5);
+        font-weight: bolder;
+        padding: 0 5px;
+        margin-bottom: rhythm(.25);
+    }
+}
+.lottery {
+    @extend %clear;
+}
+.luck {
+    @include span(8 of 16);
+    background: $whiteColor;
+    padding: 10px;
+    text-align: center;
+    @include box-sizing(border-box);
+    p {
+        @include adjust-font-size-to(nth($font-list, 1), 1);
+        color: #333;
+        margin-bottom: rhythm(.5);
+        text-align: left;
+        height: 80px;
+        overflow: hidden;
+    }
+    .header {
+        font-weight: bolder;
+        position: relative;
+        min-height: 38px;
+        @extend %clear;
+        h6 {
+            @include span(8 of 8 nest);
+            @include adjust-font-size-to(nth($font-list, 3), 1.5);
+            color: $pinkColor;
+            text-align: left;
+            padding-right: 80px;
+            @include box-sizing(border-box);
+            border-bottom: 1px dashed #333;
+            height: rhythm(3.25);
+            overflow: hidden;
+        }
+        span {
+            // @include span(2 of 8 nest);
+            width: 80px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            top: -10px;
+            right: 0px;
+            background: url(../images/places-.png) no-repeat;
+            @include box-sizing(border-box);
+            height: 44px;
+            text-align: center;
+            color: $whiteColor;
+            @include adjust-font-size-to(nth($font-list, 1), 1.5);
+            strong {
+                color: $whiteColor;
+                @include adjust-font-size-to(nth($font-list, 3), 1.5);
+            }
+        }
+    }
+    .figure {
+        @include span(8 of 8 nest);
+        margin-bottom: rhythm(.5);
+        img {
+            max-width: 100%;
+        }
+    }
+    .footer {
+        margin-top: rhythm(.5);
+        @extend %clear;
+        span {
+            display: block;
+            @include span(3 of 8);
+            color: $pinkColor;
+            text-align: right;
+            strong {
+                @include adjust-font-size-to(nth($font-list, 6), 2 );
+                font-weight: bolder;
+                color: $pinkColor;
+            }
+        }
+        a {
+            background: $greenColor;
+            color: $whiteColor;
+            @include span(5 of 8);
+            @extend %boxShadow;
+            &:after {
+                border-top-color: #0a6318;
+
+            }
+            &.on {
+                background-color: #ea2479;
+                &:after {
+                    border-top-color: #9b1651;
+                }
+            }
+            img {
+                padding-left: 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+// 合作廠商
+.sponsor {
+    @extend %clear;
+    .figure {
+        @include span(6 of 16);
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.sponsorWord {
+    @include span(10 of 16 nest);
+}
+.sponsorLink {
+    a {
+        @include span (5 of 10);
+        @extend %boxShadow;
+        background: $greenColor;
+        color: #fff;
+        img {
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+        &:after {
+            border-top-color: #0a6318;
+        }
+        &.fb {
+            background-color: #307eff;
+            &:after {
+                border-top-color: #0c0a63;
+            }
+        }
+        &.on {
+            background-color: #ea2479;
+            &:after {
+                border-top-color: #9b1651;
+            }
+        }
+    }
+}
+// 注意事項
+.notice {
+    margin-bottom: rhythm(1);
+    padding-left: rhythm(1);
+    h4 {
+        @include adjust-font-size-to(nth($font-list, 4), 2);
+        font-weight: bolder;
+    }
+    li {
+        list-style-type:decimal;
+        margin-left: 25px;
+        text-align: left;
+        margin-bottom: rhythm(0.5);
+    }
+}
+// 推薦跨年行程 recommend
+.anchorBox {
+    @include span(16 of 16);
+    margin-bottom:rhythm(.5);
+    a {
+        @include span(4 of 16);
+        margin-bottom: rhythm(.5);
+        text-align: center;
+        display: block;
+        line-height: rhythm(1.5);
+        @extend %boxShadow;
+        border: 3px solid #000;
+        background-color: $greenColor;
+        @include box-sizing(border-box);
+        color: #fff;
+        img {
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+        &:after {
+            border-top-color: #000;
+            bottom: -7px;
+            width: 103%;
+            left: -2px;
+        }
+        &:hover {
+            background-color: #ea2479;
+        }
+    }
+}
+.recoBox {
+    display: block;
+    text-decoration: none;
+    @include span(10 of 16);
+    h6 {
+        @include adjust-font-size-to(nth($font-list, 4), 1.5);
+        font-weight: bold;
+        border-bottom: 1px solid #333;
+        margin-bottom: rhythm(.5);
+    }
+    p {
+        @include adjust-font-size-to(nth($font-list, 1), 1);
+        color: #333;
+        margin-bottom: rhythm(.75);
+    }
+    strong {
+        @include adjust-font-size-to(nth($font-list, 2), 1);
+        color: $pinkColor;
+        display: block;
+        margin-bottom: rhythm(0.25);
+        font-weight: bolder;
+        &:before, &:after {
+            content: "★";
+            display: inline;
+            color: $pinkColor;
+        }
+    }
+    ul {
+        li {
+           color: #333; 
+           list-style-type:decimal;
+            margin-left: rhythm(1);
+            text-align: left;
+        }
+    }
+}
+//大集合頁 set
+.setBanner {
+    @include span(16 of 16);
+    .Box_Content {
+        // padding: rhythm(1);
+        @include box-sizing(border-box);
+        background-color: $whiteColor;
+        &:before, &:after {
+        background-color: $whiteColor;
+        }
+        a {
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+
+.bt_free {
+    text-align: center;
+    @include span(16 of 16);
+    @extend %Box-outer;
+    a {
+        display: block;
+        @extend %Box-inner;
+        text-align: center;
+        font-weight: bolder;
+        text-decoration: none;
+        background-color: $redColor;
+        @include span(16 of 16 nest);
+        @include adjust-font-size-to(nth($font-list, 4));
+        &:before, &:after {
+            background-color: $darkColor;
+        }
+        span {
+            display: block;
+            position: relative;
+            padding: rhythm(0.5) 0;
+            border: 6px solid #fff;
+            @include box-sizing(border-box);
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border: 2px solid #000;
+            }
+        }
+    }
+}
+
+
+@include breakpoint(max-width 980px) {
+    body {
+        padding-top: 0 !important;
+    }
+    #lionhead, #lionfooter {
+        display: none !important;
+    }
+    #main {
+        padding-top: 170px;
+    }
+    .fixmain {
+       .md_main {
+        // margin-top: -40px;
+       } 
+    }
+    #wrap {
+        position: relative;
+    }
+    .header_content {
+        background-size: cover;
+        position: fixed;
+        // position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 60;
+        border-bottom: 3px solid #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0, .2) ;
+        h1 {
+            height: 180px;
+            a {
+                img {
+                    height: 180px;
+                }
+            }
+        }
+    }
+    .menu {
+        display: block;
+    }
+    .aside {
+        @include span(24);
+        text-align: center;
+        margin-bottom: rhythm(2);
+        >div {
+            @include span(12);
+            text-align: center;
+        }
+        .header, .R_bannerBox {
+            max-width:310px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    .nav {
+        position: fixed;
+        background: black;
+        width: 180px;
+        height: 100%;
+        z-index: 12;
+        top: 0;
+        left: 0;
+        background: $greenColor;
+        display: none;
+    }
+    .firstNav {
+        >li {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid $yellowColor;
+            &+li {
+                &:before{
+                display: none;
+                }
+            }
+            &:hover {
+                padding-bottom: 0;
+                >a {
+                    color: #fff;
+                    background: none;
+                    @include border-radius(0);
+                }
+            }
+            >a{
+                width: 100%;
+                padding: 0;
+                @include border-radius(0);
+            }
+        }
+        .on {
+            &:hover {
+                padding-bottom: 0;
+                >a {
+                    padding-bottom: 0;
+                    @include border-radius(0);
+                }
+            }
+        }
+    }
+    .secNav{
+        display: block;
+        position: relative;
+        >li {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid $greenColor;
+            &:hover {
+                >a {
+                    @include border-radius(0);
+                    background: $yellowColor;
+                    color:#333;
+                }
+                ul.thirdNav {
+                    display: none;
+                }
+            }
+            >a {
+                line-height: rhythm(2.5);
+                padding: 0;
+                margin: 0;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .thirdNav {
+        display: block;
+        position: relative;
+        top: 0;
+        left:0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        &:before {
+            left:85px;
+        }
+    }
+    .actMenu {
+        overflow: hidden;
+        .nav {
+            display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        #wrap {
+            position: relative;
+            left: 180px;
+        }
+        .md_sitemap, .header_content {
+            left: 180px;
+        }
+        .menu {
+            left:190px;
+            &:before{
+                -moz-transform: rotate(-45deg); 
+                -khtml-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg); 
+                -o-transform: rotate(-45deg); 
+                -transform: rotate(-45deg);
+                margin-top: 0px;
+                top: 18px;
+            }
+            &:after {
+                -moz-transform: rotate(45deg); 
+                -khtml-transform: rotate(45deg);
+                -webkit-transform: rotate(45deg); 
+                -o-transform: rotate(45deg); 
+                -transform: rotate(45deg);
+                top:18px;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+    .topBanner {
+        a {
+            &.on {
+
+            }
+            span {
+                &:before {
+                    right: 10%;
+                }
+            }
+        }
+    }
+    .md_sitemap {
+        background-color: $greenColor;
+        position: fixed;
+        width: 100%;
+        top: 180px;
+        left: 0;
+        z-index: 55;
+        display: none;
+        .sitemap {
+            h6, span {
+                display: none;
+            }
+            ul {
+                background-color: $greenColor;
+                li {
+                    &:after {
+                        color: #fff;
+                    }
+                    a {
+                        color: #fff;
+                    }
+                    &.on {
+                        a {
+                            color: $yellowColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #topBt {
+        right: 10px;
+        bottom: 10px;
+    }
+    .tourBox {
+        >a {
+            top:-200px;
+        }
+    }
+    .fixed {
+        .menu {
+            position: fixed;
+            z-index: 21;
+        }
+        .md_sitemap {
+            position: fixed;
+            width: 100%;
+            top: 180px;
+            z-index: 20;
+        }
+        .header_content {
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 80;
+            @include box-shadow(0 4px 6px rgba(0,0,0, .5));
+        }
+    }
+
+    .main {
+        @include span(24);
+        text-align: center;
+        margin-bottom: rhythm(1);
+    }
+
+    .activity {
+        h5 {
+            @include span(5 of 24 nest);
+        }
+    }
+    .special_word, .coupon, .sponsor {
+        .figure {
+            @include span (6 of 24);
+            & +div {
+                @include span (18 of 24);
+            }
+        }
+        .specialBox {
+            @include span (18 of 24);
+        }
+    }
+    .luck {
+        @include span(12 of 24);
+        .header {
+            h6 {
+                @include span(12 of 12);
+                // margin-right: 120px;
+            }
+        }
+        .figure {
+            margin-bottom: rhythm(.5);
+            // padding-bottom: 63%;
+            img {
+                width: 100%;
+            }
+            // background-position: center;
+            // background-size:cover;
+        }
+        p {
+            height: 60px;
+        }
+    }
+}
+
+@include breakpoint(max-width 720px) {
+    #main {
+        padding-top: 80px;
+    }
+    .header_content {
+        background-size: cover;
+        h1 {
+            height: 100px;
+            a {
+                img {
+                    height: 100px;
+                }
+            }
+        }
+    }
+    .aside {
+        >div {
+            @include span(24 of 24);
+        }
+    }
+    .topBanner {
+        h6 {
+            @include span(24);
+            margin-bottom: rhythm(.5);
+        }
+        a {
+            @include span(24);
+            @include adjust-font-size-to(nth($font-list, 2), 3);
+        }
+    }
+    .activity {
+        h5 {
+            @include adjust-font-size-to(nth($font-list, 2), 2.8);
+            width: 150px;
+        }
+    }
+    .tourBox {
+        >a {
+            top:-220px;
+        }
+    }
+    .sponsorLink a {
+        @include span(24 of 24);
+        margin-bottom: rhythm(.5);
+    }
+    .luck {
+        @include span(24 of 24);
+        margin-bottom: rhythm(1);
+        .header {
+            h6 {
+                height: auto;
+                padding-bottom: rhythm(0.5);
+            }
+        }
+        p {
+            height: auto;
+        }
+        .footer {
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            span {
+                @include span(24 of 24);
+                text-align: center;
+            }
+            a {
+                @include span(24 of 24 nest);
+                margin: rhythm(.5) auto;
+            }
+        }
+    }
+    .special_word, .coupon, .sponsor, .star {
+        .figure {
+            @include span (24 of 24);
+            margin-bottom: rhythm(.5);
+            text-align: center;
+            img {
+                display: inline;
+            }
+            p {
+                @include adjust-font-size-to(nth($font-list, 2), 1);
+            }
+            & +div {
+                @include span (24 of 24);
+            }
+        }
+        .specialBox {
+            @include span (24 of 24);
+            h6 {
+                text-align: center;
+            }
+        }
+    }
+    .anchorBox {
+        a {
+            @include span(12 of 24);
+            &:after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    .bt_free {
+        strong {
+            display: block;
+        }
+    }
+    .md_sitemap {
+        top: 100px;
+    }
+    .md_main {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 0px) {
+  html, body {
+    min-width: 320px
+  }
+}

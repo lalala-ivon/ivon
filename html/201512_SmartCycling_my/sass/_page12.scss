@@ -1,0 +1,583 @@
+.th_adven {
+	@include span(24 nest);
+	position: relative;
+	>header {
+		@extend %wordFamily;
+		margin-bottom: 100px;
+		h5 {
+			font-size: 32px;
+			color: #333;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		>p {
+			border-top: 1px solid #333;
+			border-bottom: 1px solid #333;
+			width: 510px;
+			padding-top: 35px;
+			padding-bottom: 35px;
+			margin: auto;
+			text-align: center;
+			line-height: 25px;
+		}
+		span {
+			font-size: 16px;
+			color: #333;
+			display: inline-block;
+			line-height: 25px;
+		}
+
+	}
+	.top {
+		@extend %top;
+	}
+}
+
+.md_adven {
+	@extend %wordFamily;
+	padding-right: 40px;
+	padding-left: 60px;
+	margin-bottom: 20px;
+	@include box-sizing(border-box);
+	>header {
+		@include span(24 nest);
+		@extend %clear;
+		margin-bottom: 25px;
+		h3 {
+			font-size: 24px;
+			color: #333;
+			font-weight: bolder;
+			float: left;
+			margin-right: 35px;
+		}
+	}
+	.all {
+		width: 135px;
+		height: 25px;
+		padding-top: 5px;
+		@include box-sizing(border-box);
+		border-bottom: 1px solid $grayColor;
+		float: left;
+		position: relative;
+		&:hover {
+			>div {
+				display: block;
+			}
+		}
+		h6 {
+			height: 100%;
+			position: relative;
+			font-size: 12px;
+			color: $grayColor;
+			text-decoration: none;
+			&:after {
+				@extend %triangle;
+				border-width: 0 3px 5px 3px;
+				border-color: transparent transparent $greenColor transparent;
+				top: 5px;
+				right: 0;
+			}
+		}
+		>div {
+			position: absolute;
+			top: 24px;
+			left: 0;
+			z-index: 5;
+			background-color: #d7d7d7;
+			border:1px solid #b8b8b8;
+			padding: 5px;
+			display: none;
+			a {
+				display: block;
+				font-size: 14px;
+				color: #818181;
+				text-decoration: none;
+				padding: 5px 10px;
+				@include box-sizing(border-box);
+				&:hover {
+					background-color: $greenColor;
+					color: $lightColor;
+				}
+			}
+			input {
+				width: 100%;
+				height: 24px;
+				margin-bottom: 5px;
+				padding-right: 25px;
+				padding-left: 5px;
+				@include box-sizing(border-box);
+			}
+			.zoom {
+				position: absolute;
+				right: 0;
+				top: 4px;
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	.list {
+		float: right;
+		a {
+			display: inline-block;
+			img {
+				opacity: .5;
+			}
+			&+a {
+				margin-left: 8px;
+			}
+			&:hover {
+				img {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.pt_adven {
+	@extend %clear;
+	@extend %wordFamily;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border-bottom: 1px solid #000;
+	figure {
+		width: 350px;
+		float: left;
+		margin-right: 40px;
+		position: relative;
+		>div {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0, .5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 3;
+			display: none;
+			a {
+				display: block;
+				width: 115px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				font-size: 14px;
+				text-decoration: none;
+				color: $lightColor;
+				border:1px solid $lightColor;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+			}
+		}
+		&:hover {
+			div {
+				display: block;
+			}
+		}
+		>img {
+			width: 100%;
+		}
+	}
+	.adven {
+		width: 490px;
+		min-height: 250px;
+		float: left;
+		padding-top: 20px;
+		padding-right: 85px;
+		@include box-sizing(border-box);
+		position: relative;
+		.chooseed {
+			display: block;
+			width: 80px;
+			height: 15px;
+			line-height: 15px;
+			@include border-radius(10px);
+			background-color: $greenColor;
+			color: $lightColor;
+			margin-bottom: 10px;
+			span {
+				@extend %fontSize9;
+			}
+		}
+		h5 {
+			font-size: 18px;
+			margin-bottom: 10px;
+			line-height: 20px;
+		}
+		p {
+			font-size: 12px;
+			color: $grayColor;
+			line-height: 18px;
+		}
+	}
+	.view {
+		margin-top: 25px;
+		margin-left: -5px;
+		display: block;
+		font-size: 16px;
+		text-decoration: none;
+		@extend %view;
+		color: #333;
+		float: left;
+		padding-right: 18px;
+	}
+	.likeBox {
+		@include span(24 nest);
+		position: absolute;
+		bottom: 0;
+		ul {
+			white-space: nowrap;
+			li {
+				display: inline-block;
+				a {
+					display: inline-block;
+					padding-right: 8px;
+				}
+			}
+			img {
+				display: inline-block;
+			}
+			span {
+				font-size: 12px;
+				color: #b5b5b5;
+				display: inline-block;
+				padding-right: 20px;
+				position: relative;
+				top: -5px;
+			}
+		}
+	}
+}
+.pageMB {
+	@extend %wordFamily;
+	text-align: center;
+	margin-top: 20px;
+	a {
+		font-size: 12px;
+		color: #333;
+		text-decoration: none;
+		display: inline-block;
+		padding-right: 6px;
+		padding-left: 6px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	>p {
+		display: inline-block;
+	}
+}
+.pt_adList {
+	ul {
+		@extend %clear;	
+	}
+	li {
+		float: left;
+		position: relative;
+		width: 287px;
+		&:hover {
+			.adven {
+				display: block;
+			}
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.adven {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 30px 20px 20px;
+		@include box-sizing(border-box);
+		background-color: rgba(0,0,0, .5);
+		display: none;
+		.chooseed {
+			display: block;
+			width: 80px;
+			height: 15px;
+			line-height: 15px;
+			@include border-radius(10px);
+			background-color: $greenColor;
+			color: $lightColor;
+			margin-bottom: 10px;
+			span {
+				@extend %fontSize9;
+			}
+		}
+		h5 {
+			font-size: 18px;
+			color: $lightColor;
+			margin-bottom: 10px;
+		}
+		p {
+			@extend %fontSize11;
+			color: $grayColor;
+			margin-left: -10px;
+		}
+		.view {
+			@extend %view;
+			margin-left: -3px;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			&:after {
+				top: 2px;
+			}
+		}
+	}
+}
+// page3
+.th_services {
+	>header {
+		.serList {
+			@extend %topNav;
+			margin-top: -40px;
+			// padding-bottom: 20px;
+			margin-bottom: 30px;
+			@extend %clear;
+			display: none;
+			li {
+				a {
+					font-size: 21px;
+					color: $lightColor;
+					text-decoration: none;
+					&:hover {
+						color: $greenColor;
+					}
+				}
+				&.on {
+					a {
+						color: $greenColor;
+					}
+				}
+			}
+		}
+	}
+}
+.md_services {
+	.serList {
+		@extend %wordFamily;
+		@extend %clear;
+		a {
+			display: inline-block;
+			padding-right: 20px;
+			padding-left: 20px;
+			text-decoration: none;
+			color: #333;
+			font-size: 14px;
+			height: 40px;
+			line-height: 40px;
+			&:hover {
+				background-color: #333;
+				color: $lightColor;
+			}
+		}
+		li {
+			float: left;
+		}
+		.on {
+			a {
+				background-color: #333;
+				color: $lightColor;
+			}
+		}
+	}
+}
+.pt_services {
+	@extend %clear;
+	@extend %wordFamily;
+	background-color: #333;
+	padding: 40px 50px 50px;
+	margin-bottom: 70px;
+	>figure {
+		width: 125px;
+		float: left;
+		margin-right: 50px;
+		>img {
+			width: 100%;
+		}
+	}
+	.pt_company {
+		width: 630px;
+		float: left;
+		>h4 {
+			font-size: 19px;
+			line-height: 25px;
+			color: $lightColor;
+			padding-bottom: 25px;
+			border-bottom: 1px solid $lightColor;
+			margin-bottom: 30px;
+		}
+		p {
+			color: $lightColor;
+		}
+	}
+}
+//===== RWD變版 =====
+
+//Pad 專用
+@include breakpoint(max-width 1000px) {
+	.th_adven {
+		padding-top: 40px;
+	}
+	.md_adven {
+		padding-right: 20px;
+		padding-left: 20px;
+		@include box-sizing(border-box);
+	}
+	.pt_adven {
+		@include span(24 nest);
+		figure {
+			@include span(8 of 24 nest);
+			margin-right: 0;
+		}
+		.adven {
+			@include span(16 of 24 nest);
+			padding-left: 20px;
+			padding-right: 0;
+			padding-top: 0;
+			@include box-sizing(border-box);
+			min-height: auto;
+		}
+		.likeBox {
+			position: relative;
+		}
+	}
+	.pageMB {
+		@include span(24 nest);
+		margin-bottom: 20px;
+	}
+	.pt_adList {
+		ul {
+			@include span(24 nest);
+		}
+		li {
+			@include span(8 of 24 nest);
+			// img {
+			// 	width: 100%;
+			// }
+		}
+	}
+	.th_services {
+		>header {
+			.serList {
+				display: block;
+			}
+		}
+	}
+	.md_services {
+		.serList {display: none;}
+	}
+	.pt_services {
+		padding: 40px;
+		margin-bottom: 40px;
+		@include box-sizing(border-box);
+		>figure {
+			@include span(6 of 24);
+			text-align: center;
+			// img {
+			// 	max-width: 100%;
+			// 	display: inline-block;
+			// }
+		}
+		.pt_company {
+			@include span(18 of 24);
+			padding-left: 20px;
+			@include box-sizing(border-box);
+		}
+	}
+}
+@include breakpoint(max-width 980px) {
+	.pt_adList {
+		li {
+			@include span(12 of 24 nest);
+		}
+	}
+}
+//Phone 專用
+@include breakpoint(max-width 800px) {
+	.pt_adven {
+		.likeBox {
+			display: none;
+		}
+		.view {
+			display: none;
+		}
+	}
+}
+
+@include breakpoint(max-width 640px) {
+	.th_adven {
+		>header {
+			margin-bottom: 40px;
+			>p {
+				width: span(22 of 24 at 2 isolate);
+				margin-right: auto;
+				padding: 20px;
+				@include box-sizing(border-box);
+			}
+			span {
+				display: inline;
+			}
+		}
+	}
+	.md_adven {
+		>header {
+			margin-bottom: 15px;
+		}
+		.list {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+	.pt_adList {
+		li {
+			@include span(24 nest);
+		}
+	}
+
+	.pt_services {
+		padding: 30px 20px 20px;
+		@include box-sizing(border-box);
+		>figure {
+			@include span(8 of 24);
+		}
+		.pt_company {
+			@include span(16 of 24);
+		}
+	}
+}
+@include breakpoint(max-width 500px) {
+	.th_adven {
+		padding-top: 40px;
+
+	}
+	.th_services {
+		>header {
+			.serList {
+				li {
+					a {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+	.pt_adven {
+		figure {
+			@include span(24);
+			margin-bottom: 10px;
+		}
+		.adven {
+			@include span(24);
+			padding-left: 0;
+		}
+	}
+}

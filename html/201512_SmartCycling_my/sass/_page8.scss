@@ -1,0 +1,130 @@
+.th_bike {
+	@include span(24 nest);
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.md_picShow {
+	position: relative;
+	margin-bottom: 20px;
+	li {
+	width: 980px;
+		a {
+			display: block;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.prev, .next {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+		z-index: 3;
+	}
+	.next {
+		background: url(../images/bt-next_.png) no-repeat;
+		right: 0;
+	}
+	.prev {
+		background: url(../images/bt-prev_.png) no-repeat;
+		left: 0;
+	}
+}
+.pt_bike {
+	@extend %clear;
+	li {
+		float: left;
+		width: 204px;
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			@extend %wordFamily;
+			font-size: 18px;
+			text-align: center;
+			font-weight: bolder;
+			color: $lightColor;
+			text-decoration: none;
+			background-color: #b5b5b5;
+			&:hover {
+				background-color: $greenColor;
+			}
+		}
+		&.on {
+			a {
+				background-color: $greenColor;
+			}
+		}
+	}
+}
+.pt_bikeCT {
+	table {
+		width: 100%;
+		tr {
+			&:nth-child(odd){
+				background-color: #eee;
+			}
+		}
+		th {
+			width: span(8 of 24 nest);
+			padding:10px 20px;
+			@include box-sizing(border-box);
+			@extend %wordFamily;
+			font-size: 17px;
+			font-weight: bold;
+			color: #333;
+		}
+		td {
+			@extend %wordFamily;
+			font-size: 17px;
+			color: #666;
+		}
+	}
+}
+
+
+//===== RWD變版 =====
+
+//Pad 專用
+@include breakpoint(max-width 1000px) {
+	.th_bike {
+		padding-top: 30px;
+	}
+	.md_picShow {
+		li {
+			width: auto;
+		}
+	}
+}
+//Phone 專用
+@include breakpoint(max-width 800px) {
+	.pt_bike {
+		
+		li {
+			@include span(8 of 24 nest);
+		}
+	}
+	.pt_bikeCT {
+		table {
+			th {
+				width: span(12 of 24)
+			}
+		}
+	}
+}
+@include breakpoint(max-width 720px) {
+
+}
+@include breakpoint(max-width 500px) {
+	.pt_bike {
+		li {
+			@include span(24 nest);
+			margin: 0;
+		}
+	}
+}

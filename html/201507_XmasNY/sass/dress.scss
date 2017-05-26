@@ -1,0 +1,429 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+@import "var";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-width: 960px;
+    *, *:before, *:after {
+        //@include user-select(none);
+        color: $darkColor;
+        font-family:"xingothic-w3", "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif";
+        //verdana
+    }
+}
+
+body {
+    margin:0;
+    padding: 35px 0 0 0;
+}
+
+// 紅配綠。趴踢穿搭吸睛術
+.dressHeader {
+    background: url(../images/dressBg.png) no-repeat;
+    h1 {
+        height: 285px;
+        text-align: center;
+        @extend %vertical-outer;
+        @extend %block;
+        a {
+            @extend %vertical-inner;
+            @include span(16 of 24);
+            float: none;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.th_derssed {
+    @extend %block;
+    margin-top: rhythm(1);
+    .Box_Content {
+        @extend %Box-inner;
+    }
+    .notice {
+        @include span(isolate 22 of 24 at 2 nest);
+        margin-right: 100%;
+        padding-left: 0;
+    }
+}
+.md_dressed {
+    position: relative;
+    >a {
+        position: absolute;
+        top: -45px;
+    }
+    &.activity {
+        .BoxWrap {
+            @extend %Box-outer;
+            @include span(23 of 24 nest);
+            float: right;
+        }
+        p {
+            margin-bottom: 0;
+            @include adjust-font-size-to(nth($font-list,5));
+        }
+        ul {
+            @include span(24 nest);
+            @extend %clear;
+            float: none;
+            margin-top: rhythm(.5);
+        }
+        li {
+            @include span(6 of 24);
+            height: 192px;
+            background-color: #e2e2e2;
+            border: 10px solid #fff;
+            border-top-width: 5px;
+            @include box-sizing(border-box);
+            >header {
+                @include adjust-font-size-to(nth($font-list, 5));
+                background-color: #fff;
+                width: 100%;
+                position: relative;
+                padding-left: 45px;
+                padding-bottom: 5px;
+                @include box-sizing(border-box);
+                font-weight: bolder;
+                span {
+                    font-size: 40px;
+                    color: #fff;
+                    background-color: #ef92ae;
+                    display: inline-block;
+                    padding-left: rhythm(.5);
+                    position: absolute;
+                    top: 0px;
+                    left: -15px;
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 20px 0 20px 20px;
+                        border-color: transparent transparent transparent #ef92ae;
+                        position: absolute;
+                        right: -20px;
+                        top: 0;
+                    }
+                }
+
+            }
+            >div {
+                @include span(24);
+                height: 100%;
+                padding: rhythm(.5);
+                @include box-sizing(border-box);
+                @include adjust-font-size-to(nth($font-list, 4));
+                line-height: 29px;
+                >span {
+                    color: $redColor;
+                }
+            }
+        }
+    }
+    &.star {
+        .BoxWrap {
+            @extend %Box-outer;
+            @include span(24 of 24 nest);
+        }
+        .Box_Content {
+            @include span(24 nest);
+            padding-top: 10px;
+            @include box-sizing(border-box);
+            >header {
+                @include span(12 of 24);
+                position: relative;
+                img {
+                    &+img {
+                        position: absolute;
+                        right: rhythm(.5);
+                        top: rhythm(.5);
+                    }
+                }
+            }
+            >div {
+                @include span(12 of 24);
+            }
+        }
+        h4 {
+            @include adjust-font-size-to(nth($font-list, 4));
+        }
+    }
+}
+.th_dressCT {
+    >header {
+        @include span(12 of 12);
+        h6 {
+            @include adjust-font-size-to(nth($font-list, 4));
+            border-bottom:1px solid #000;
+            font-weight: bolder;
+        }
+        p {
+            @include adjust-font-size-to(nth($font-list, 2));
+            color: $redColor;
+            text-align: right;
+            font-weight: bolder;
+            span {
+                @include adjust-font-size-to(nth($font-list, 4));
+                color: $redColor;
+                font-weight: bolder;
+            }
+        }
+    }
+    >div {
+        @include span(12 of 12 nest);
+        p {
+           color: #333; 
+        }
+        h6 {
+            @include adjust-font-size-to(nth($font-list, 2));
+            color: $pinkColor;
+        }
+
+    }
+    .sponsorLink {
+        margin-top: 10px;
+        @include span(12 of 12 nest);
+        a {
+            @include span(4 of 12);
+            text-indent: 0;
+        }
+        &.btBuy {
+            background: $greenColor;
+            &:after {
+                border-top-color: #0a6318;
+            }
+        }
+    }
+}
+.dressNav {
+    @extend %block;
+    height: 185px;
+    ul {
+        @include span(24);
+    }
+    li {
+        @include span(8 of 24);
+    }
+    a {
+        display: inline-block;
+        @include adjust-font-size-to(nth($font-list, 4), 3.5);
+        font-weight: bold;
+        text-align: center;
+        @include span(8 of 8);
+        text-decoration: none;
+        @extend %Box-inner;
+        background-color:#57cff0 ;
+        &:before, &:after {
+            background-color: $darkColor;
+        }
+        img {
+            display: none;
+            padding-left: 5px;
+        }
+        // &.on {
+        //     background-color:$yellowColor ;
+        //     img {
+        //         // display: block;
+        //         display: inline;
+        //         vertical-align: middle;
+        //     }
+        // }
+        &:hover {
+            background-color:$yellowColor ;
+            img {
+                display: inline;
+                vertical-align: middle;
+            }
+        }
+        span {
+            display: block;
+            position: relative;
+            border: 6px solid #fff;
+            @include box-sizing(border-box);
+            background: url(../images/point-.png);
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border: 2px solid #000;
+            }
+        }
+    }    
+}
+.firm {
+    @include span(24 nest);
+    @extend %clear;
+    float: none;
+    >header {
+       @include span(6 of 24);
+       img {
+        max-width: 100%;
+       }
+    }
+    >div {
+        @include span(10 of 24);
+    }
+    >footer {
+        @include span(8 of 24 nest);
+        a {
+            text-indent: 0;
+        }
+    }
+}
+
+
+@include breakpoint(max-width 980px) {
+    .dressHeader {
+        position: relative;
+        background-size:cover;
+        h1 {
+            height: auto;
+            padding: 2% 0;
+        }
+    }
+    .dressNav {
+        height: 60px;
+        a {
+            line-height: 50px;
+            span {
+                border-width: 3px;
+            }
+            &:hover {
+                background-color:#57cff0 ;
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+    .th_derssed {
+        margin-top: -150px;
+    }
+    .md_dressed{
+        &.activity {
+            li {
+                @include span(12 of 24);
+                margin-bottom: rhythm(1);
+                height: 167px;
+            }
+            p {
+                @include adjust-font-size-to(nth($font-list, 4));
+            }
+        }
+        &.star {
+            .Box_Content {
+                >header {
+                    @include span(24 of 24 nest);
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                        &+img {
+                            position: relative;
+                        }
+                    }
+                }
+                >div {
+                    @include span(24 of 24 nest);
+                }
+            }
+        }
+    }
+    .firm {
+        >header {
+            @include span(8 of 24);
+            img {
+                max-width: 100%;
+            }
+        }
+        >div {
+            @include span(16 of 24);
+        }
+        >footer {
+            margin-top: rhythm(1);
+            @include span(24);
+        }
+    }
+
+}
+
+@include breakpoint(max-width 720px) {
+
+    .md_dressed{
+        &.activity {
+            li {
+                @include span(24 of 24);
+                margin-bottom: rhythm(1);
+                height: auto;
+            }
+        }
+        &.star {
+            .Box_Content {
+                >header {
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .th_dressCT {
+       .sponsorLink {
+            a {
+                @include span(24 of 24);
+            }
+       }
+    }
+    .firm {
+        >header {
+            @include span(24 of 24);
+            text-align: center;
+            margin-bottom: rhythm(.5);
+        }
+        >div {
+            @include span(24 of 24);
+        }
+    }
+    .dressNav {
+        li {
+            @include span(24);
+        }
+    }
+    .dressNav {
+        ul {
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+       li {
+            margin-bottom: rhythm(1);
+       }
+        a {
+            line-height: 40px;
+            span {
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) {
+  html, body {
+    min-width: 320px
+  }
+}

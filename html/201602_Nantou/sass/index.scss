@@ -1,0 +1,179 @@
+@charset "utf-8";
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+@import "variable";
+@import "extend";
+@import "mixin";
+
+
+
+//===== PC版 =====
+.th_index {
+  @extend %block;
+  padding-top: 20px;
+  margin-bottom: 35px;
+  .md_banner {
+    float: left;
+    width: 930px;
+    img {
+      width: 100%;
+    }
+  }
+  .md_news {
+    float: left;
+    background-color: #F2F5EA;
+    width: 320px;
+    border-top: 3px solid #D4E0BB;
+    border-bottom: 1px solid #D4E0BB;
+    h3 {
+      height: 42px;
+      padding: 20px 10px 15px 20px;
+      border-bottom: 1px solid #D4E0BB;
+      @extend %h3;
+    }
+    ul {
+      a {
+        display: block;
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 23px;
+        &:hover{
+          background-color: #FCFBFA;
+          color: #595F5F;;
+        }
+        .day {
+          font-size: 12px;
+          color: #595F5F;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.md_know {
+  width: 285px;
+  float: right;
+  >h3 {
+    @extend %h3;
+    margin-bottom: 10px;
+  }
+  >ul {
+    border:1px solid #ddd;
+    padding: 30px 10px 10px 10px;
+    @extend %clear;
+  }
+  li {
+    border-bottom: 1px dashed #BDA595;
+    padding-bottom: 15px;
+    margin-bottom: 21px;
+    a {
+      text-decoration: none;
+      display: block;
+      @extend %clear;
+      &:hover {
+        h6 {
+          color: $greenColor;
+        }
+      }
+    }
+    div {
+      width: 150px;
+      float: left;
+    }
+    figure {
+      float: right;
+      width: 90px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        padding: 4px;
+        border:1px solid #ddd;
+      }
+    }
+    .day {
+      display:inline-block;
+      background-color: #98B300;
+      color: $lightColor;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 10px;
+    }
+    h6 {
+      font-size: 13px;
+      font-weight: bolder;
+      color: #595F5F;
+      margin-bottom: 8px;
+      font-family: "新細明體";
+    }
+    p {
+      font-size: 13px;
+      color: #595F5F;
+    }
+  }
+}
+
+//===== RWD變版 =====
+
+//Pad 專用
+@include breakpoint(max-width 1270px) {
+  .th_index {
+    padding-top: 0;
+    .md_banner {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .md_news {
+      margin-right: 3%;
+      margin-left: 3%;
+      width: 94%;
+      border:1px solid #D4E0BB;
+      @include box-sizing(border-box);
+    }
+  }
+
+  .md_know {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    @include box-sizing(border-box);
+    li {
+      @include span(12 of 24);
+      div {
+        @include span(8 of 12);
+      }
+      figure {
+        @include span(4 of 12);
+      }
+    }
+  }
+
+}
+//Phone 專用
+
+@include breakpoint(max-width 680px) {
+  .md_know {
+    li {
+      @include span(24);
+    }
+  }
+  .newPD {
+    ul {
+      border:1px solid #ddd;
+    }
+    li {
+      background-color: $lightColor;
+      &+li {
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+.work { padding-top: 50px; }
+.work > div img { margin: auto; max-width: 100%; }
+
+.work_201307 { background: url(../images/20130730_bg.jpg) repeat; }
+
+.work_201405 { background: url(../images/20140513_bg.jpg) repeat; }
+
+.work_201206 { background: url(../images/works_201206_bg.jpg) repeat; padding-bottom: 0; }
+
+.resume { background-color: #f1efed; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,118 @@
+.th_company {
+	position: relative;
+	@extend %clear;
+	@extend %wordFamily;
+	.banner {
+		margin-bottom: 70px;
+		width: 980px;
+		img {
+			width: 100%;
+		}
+	}
+	.sideNav {
+		@extend %topNav;
+		width: 200px;
+		position: absolute;
+		left: 50px;
+		top: 435px;
+		li {
+			border-bottom: 1px solid #b5b5b5;
+			padding-top: 25px;
+			padding-bottom: 15px;
+			a {
+				font-size: 21px;
+				color: #b5b5b5;
+				text-decoration: none;
+				&:hover {
+					color: $greenColor;
+				}
+			}
+			&.on {
+				a {
+					color: $greenColor;
+				}
+			}
+		}
+	}
+}
+.md_company {
+	width: 530px;
+	float: right;
+	margin-right: 90px;
+	>header {
+		font-size: 18px;
+		line-height: 24px;
+		color: $greenColor;
+		border-bottom: 1px solid $greenColor;
+		position: relative;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		&:before {
+			content: "";
+			display: block;
+			width: 70px;
+			height: 3px;
+			background-color: $greenColor;
+			position: absolute;
+			bottom: -1px;
+			float: 0;
+		}
+	}
+}
+.pt_company {
+	p {
+		font-size: 13px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		line-height: 22px;
+		color: #333;
+		span {
+			text-transform: none;
+		}
+	}
+}
+//===== RWD變版 =====
+
+//Pad 專用
+@include breakpoint(max-width 1000px) {
+	.th_company {
+		.sideNav {
+			position: relative;
+			left: 0;
+			top: 0;
+			@include span(24 nest);
+			li {
+				padding: 0;
+				border-bottom: 0;
+				a {color: $lightColor;}
+			}
+		}
+		.banner {
+			@include span(24 nest);
+			margin-bottom: 30px;
+			width: auto;
+		}
+	}
+	.md_company {
+		@include span(24 nest);
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 50px;
+		@include box-sizing(border-box);
+	}
+}
+//Phone 專用
+@include breakpoint(max-width 800px) {
+
+}
+@include breakpoint(max-width 500px) {
+	.th_company{
+		.sideNav{
+			li {
+				a {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}

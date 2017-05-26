@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>2015連休攻略</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+        
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="header_content">
+                <h1><a href="#" title="2015連休攻略"><img src="images/header.png"></a></h1>
+                <a href="#" class="menu"><span>menu</span></a>
+                <div class="nav">
+                    <ul class="firstNav">
+                    <!-- 有第二個選單要加on -->
+                         <li class="on"><a href="#">國外團體</a>
+                            <ul class="secNav">
+                                <li><a href="#">日本</a>
+                                    <ul class="thirdNav">
+                                        <li><a href="#">北海道</a></li>
+                                        <li><a href="#">東京</a></li>
+                                        <li><a href="#">關西</a></li>
+                                        <li><a href="#">九州</a></li>
+                                        <li><a href="#">北陸</a></li>
+                                        <li><a href="#">沖繩</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">韓國</a>
+                                    <ul class="thirdNav">
+                                        <li><a href="#">首爾</a></li>
+                                        <li><a href="#">釜山</a></li>
+                                        <li><a href="#">濟州</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">東南亞</a></li>
+                                <li><a href="#">大陸</a></li>
+                                <li><a href="#">關島帛琉</a></li>
+                                <li><a href="#">歐洲</a></li>
+                                <li><a href="#">亞非</a></li>
+                                <li><a href="#">美加</a></li>
+                                <li><a href="#">紐奧</a></li>
+                                <li><a href="#">中南美洲</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">世界主題</a></li>
+                        <li><a href="#">雄獅自由行</a></li>
+                        <li><a href="#">航空自由行</a></li>
+                        <li><a href="#">機票</a></li>
+                        <li><a href="#">訂房</a></li>
+                        <li><a href="#">票劵</a></li>
+                        <li><a href="#">國內旅遊</a></li>
+                        <li><a href="#">台中出發</a></li>
+                        <li><a href="#">高雄出發</a></li>
+                        <li class="bt_newyear"><a href="#">跨年大集合</a></li>
+                    </ul>
+                </div>
+                <a href="#" id="topBt">TOP</a>
+            </div>
+        </div>
+        <div id="main">
+            <div class="md_main">
+                <div class="main">
+                    <div class="topBanner">
+                        <h6><a href="#"><span>聖誕禮物大方送<img src="images/borrow.png"></span></a></h6>
+                        <h6><a href="#" class="on"><span>星座X交換禮物篇<img src="images/borrow.png"></span></a></h6>
+                    </div>
+                    <!-- 買就送 同 活動說明 -->
+                    <div class="activity">
+                        <h5><span>買就送</span></h5>
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <div class="coupon">
+                                    <div class="figure">
+                                        <img src="images/coupon.png">
+                                    </div>
+                                    <div class="couponWord">
+                                        <h6>聖誕禮物 訂就送 E-COUPON</h6>
+                                        <p>即日起至2015/11/30前，於雄獅旅遊網網路下單購買任一旅遊商品並完成付款者， 即可獲得由知名XXXXX品牌【XXXX】專屬$500元抵用劵一組，每一會員帳號限獲得一次，數量有限送完為止唷！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 買再抽 -->
+                    <div class="activity">
+                        <h5><span>買再抽</span></h5>
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <div class="lotteryBox">
+                                    <h6>聖誕禮物 訂就送 E-COUPON</h6>
+                                    <p>即日起至2015/12/31前，於雄獅旅遊網網路下單購買任一旅遊商品並完成付款者， 就有機會獲得精美聖誕禮物！熱門禮物抽抽樂，雄獅旅遊陪伴您渡過暖暖聖誕夜～</p>
+                                    <div class="lottery">
+                                        <div class="luck">
+                                            <div class="header"><h6>一二三四五柳妻</h6><span><strong>2</strong>名</span></div>
+                                            <p>一案三四五硫氣八九十一案三四五硫氣八九十一案三四五硫氣八九十一案三四五硫氣八九十一案三四五硫氣八九十</p>
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/240x150/">
+                                            </div>
+                                            <div class="footer">
+                                                <span>$<strong>120</strong></span>
+                                                <a href="#" class="on">哪裡買?<img src="images/borrow-.png"></a>
+                                            </div>
+                                        </div>
+                                        <div class="luck">
+                                            <div class="header"><h6>幸運紙貼紙幸運紙貼紙幸運紙貼紙</h6><span><strong>820</strong>名</span></div>
+                                            <p>一案三四五硫氣八九十一案三四五硫氣八九十一案三四五硫氣八九十一案三四五硫氣八九十一案三四五硫氣八九十</p>
+                                            <div class="figure">
+                                                <img src="http://fakeimg.pl/240x150/">
+                                            </div>
+                                            <div class="footer">
+                                                <span>$<strong>120</strong></span>
+                                                <a href="#">哪裡買?<img src="images/borrow-.png"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 合作廠商 同 活動說明 -->
+                    <div class="activity">
+                        <h5><span>合作廠商</span></h5>
+                        <div class="BoxWrap">
+                            <div class="Box_Content">
+                                <div class="sponsor">
+                                    <div class="figure">
+                                        <img src="http://fakeimg.pl/200x200/">
+                                    </div>
+                                    <div class="sponsorWord">
+                                        <p>即日起至2015/11/30前，於雄獅旅遊網網路下單購買任一旅遊商品並完成付款者， 即可獲得由知名XXXXX品牌【XXXX】專屬$500元抵用劵一組，每一會員帳號限獲得一次，數量有限送完為止唷！</p>
+                                        <div class="sponsorLink">
+                                            <a href="#" class="on">異業官網<img src="images/borrow-.png"></a>
+                                            <a href="#" class="fb">FB粉絲團<img src="images/borrow-.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 注意事項 -->
+                    <div class="notice">
+                        <h4>注意事項</h4>
+                        <ul>
+                            <li>每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票</li>
+                            <li>每一帳號每日可投票</li>
+                            <li>每一帳號每日可投票</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="give">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_01.png" title="聖誕禮物,訂就送"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="gift.html"><img src="images/give.jpg" height="276" width="311"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dressed">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_02.png" title="趴踢穿搭,吸睛術"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/dressed.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forecast">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_03.png" title="跨年地點,大預測"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/forecast.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view">
+                        <div class="header">
+                            <h4><img src="images/bannerTitle_04.png" title="跨年必讀,懶人包"></h4>
+                        </div>
+                        <div class="R_bannerBox">
+                            <div class="R_banner">
+                                <a href="#"><img src="images/view.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/act.js" type="text/javascript"></script>

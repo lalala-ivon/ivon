@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>2015連休攻略 紅配綠。趴踢穿搭吸睛術</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dress.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/html5shiv.min.js" type="text/javascript"></script>
+        
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="dressHeader">
+                <h1><a href="javascript:;" title="2015連休攻略"><img src="images/dressTitle.png"></a></h1>
+                <!-- <a href="#" class="menu"><span>menu</span></a> -->
+                <div class="dressNav">
+                    <ul>
+                        <li><a href="#d01"><span>如何玩<img src="images/borrow.png"></span></a></li>
+                        <li><a href="#d02"><span>穿搭趣<img src="images/borrow.png"></span></a></li>
+                        <li><a href="javascirpt:;"><span>看更多活動及行程<img src="images/borrow.png"></span></a></li>
+                    </ul>
+                </div>
+                <a href="#" id="topBt">TOP</a>
+            </div>
+        </div>
+        <div id="main" class="fixmain">
+            <div class="th_derssed">
+                <!-- 活動說明 activity -->
+                <div class="activity md_dressed">
+                <a id="d01" name="d01"></a>
+                    <h5><span>活動說明</span></h5>
+                    <div class="BoxWrap">
+                        <div class="Box_Content">
+                            <p>十二月、趴踢月~ 如何穿搭成為眾目焦點看這邊! 時尚最IN服裝/配件大公開! 快來投下你喜歡的一票，就有機會把它們帶回家! (純文字檔)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 活動流程 -->
+                <div class="activity md_dressed">
+                    <h5><span>活動流程</span></h5>
+                    <div class="BoxWrap">
+                        <div class="Box_Content">
+                            <p>活動日期：2015.11.16-2015.12.13</p>
+                            <ul>
+                                <li>
+                                    <header><span>1</span>登入</header>
+                                    <div>在最喜歡的搭配中，點擊<span>【我要投票】</span></div>
+                                </li>
+                                <li>
+                                    <header><span>2</span>投票</header>
+                                    <div>使用FB會員帳號登入</div>
+                                </li>
+                                <li>
+                                    <header><span>3</span>獎項</header>
+                                    <div>於活動結束後，在每組投票者中抽出得獎者</div>
+                                </li>
+                                <li>
+                                    <header><span>4</span>小叮嚀</header>
+                                    <div>每帳號每日限投一票，投得越多中獎機會就越高！</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 穿搭趣 -->
+                <div class="star md_dressed">
+                <a id="d02" name="d02"></a>
+                    <div class="Box_header">
+                        <h4>【穿搭一】 </h4>
+                    </div>
+                    <div class="BoxWrap">
+                        <div class="Box_Content">
+                            <header>
+                                <img src="images/dressPic_01.jpg"><img src="images/dressPic_01.png">
+                            </header>
+                            <div class="th_dressCT">
+                                <header>
+                                    <h6>帥氣騎士風</h6>
+                                    <p>累積票數: <span>369</span>票</p>
+                                </header>
+                                <div>
+                                    <p>(內文*50字)以靴子的襯托裙裝的俐落風格，搭配紅綠元素，又不失聖誕氣息。</p>
+                                    <h6>★★穿搭小秘訣★★</h6>
+                                    <p>(內文*50字)紅色或綠色選其中一顏色為主要色系，另一色為點綴性的單品。</p>
+                                </div>
+                                <div class="sponsorLink">
+                                    <a href="javascript:;" class="on" >我要投票<img src="images/borrow-.png"></a>
+                                    <a href="javascript:;" class="fb">FB分享<img src="images/borrow-.png"></a>
+                                    <a href="javascript:;" class="btBuy">哪裡買<img src="images/borrow-.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="star md_dressed">
+                    <div class="Box_header">
+                        <h4>【穿搭二】 </h4>
+                    </div>
+                    <div class="BoxWrap">
+                        <div class="Box_Content">
+                            <header>
+                                <img src="images/dressPic_02.jpg"><img src="images/dressPic_02.png">
+                            </header>
+                            <div class="th_dressCT">
+                                <header>
+                                    <h6>帥氣騎士風</h6>
+                                    <p>累積票數: <span>369</span>票</p>
+                                </header>
+                                <div>
+                                    <p>(內文*50字)以靴子的襯托裙裝的俐落風格，搭配紅綠元素，又不失聖誕氣息。</p>
+                                    <h6>★★穿搭小秘訣★★</h6>
+                                    <p>(內文*50字)紅色或綠色選其中一顏色為主要色系，另一色為點綴性的單品。</p>
+                                </div>
+                                <footer class="sponsorLink">
+                                    <a href="javascript:;" class="on">我要投票<img src="images/borrow-.png"></a>
+                                    <a href="javascript:;" class="fb">FB分享<img src="images/borrow-.png"></a>
+                                    <a href="javascript:;" class="btBuy">哪裡買<img src="images/borrow-.png"></a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 合作廠商  -->
+                <div class="activity md_dressed">
+                    <h5><span>合作廠商</span></h5>
+                    <div class="BoxWrap">
+                        <div class="Box_Content">
+                            <div class="firm">
+                                <header>
+                                    <img src="images/firmLogo.jpg">
+                                </header>
+                                <div>
+                                    廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹廠商廠商介紹廠商介紹廠商介紹介紹廠商廠商介紹廠商介紹廠商介紹介紹廠商廠商介紹廠商介紹廠商介紹介紹廠商廠商介紹廠商介紹廠商介紹介紹廠商廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹廠商介紹
+                                </div>
+                                <footer class="sponsorLink">
+                                    <a href="#" class="on">前往官網<img src="images/borrow-.png"></a>
+                                    <a href="#" class="fb">前往粉絲團<img src="images/borrow-.png"></a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- 注意事項 -->
+                <div class="notice">
+                    <h4>注意事項</h4>
+                    <ul>
+                        <li>每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票每一帳號每日可投票</li>
+                        <li>每一帳號每日可投票</li>
+                        <li>每一帳號每日可投票</li>
+                    </ul>
+                </div>               
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/act.js" type="text/javascript"></script>

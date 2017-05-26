@@ -1,0 +1,83 @@
+#header, .th_tour > ul > li { max-width: 100%; margin-left: auto; margin-right: auto; max-width: 960px; }
+#header:after, .th_tour > ul > li:after { content: " "; display: block; clear: both; }
+
+.th_tour:after { content: ""; display: block; clear: both; }
+
+#header { padding: 20px 0; }
+
+.header_content { width: 27.08333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.header_content img { max-width: 100%; display: inline-block; }
+
+.header_CT { position: relative; width: 68.75%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+.header_CT header { width: 97.05882%; float: left; margin-left: 1.47059%; margin-right: 1.47059%; padding-bottom: 20px; }
+.header_CT h2 { padding-left: 30px; }
+.header_CT h2 img { max-width: 100%; }
+.header_CT footer { margin-top: 10px; }
+.header_CT footer h6 { width: 11.11111%; float: left; font-size: 14px; line-height: 30px; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; background-color: #666a6a; color: #c8e02a; text-align: center; }
+.header_CT footer > div { width: 86.11111%; float: left; margin-left: 1.38889%; margin-right: 1.38889%; font-size: 12px; line-height: 20px; }
+.header_CT footer > div span { display: inline-block; font-size: 12px; line-height: 20px; width: 20px; height: 20px; text-align: center; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background-color: #c8e02a; }
+.header_CT footer > div span + span { margin-left: 10px; }
+
+.lion { width: 38.23529%; float: left; margin-left: 1.47059%; margin-right: 1.47059%; }
+.lion img { max-width: 100%; }
+
+.subtitle { width: 55.88235%; float: left; margin-left: 1.47059%; margin-right: 1.47059%; margin-top: 10px; }
+.subtitle img { max-width: 100%; }
+
+.bonusHeader h2 { padding-left: 0; }
+.bonusHeader .subtitle { width: 97.05882%; float: left; margin-left: 1.47059%; margin-right: 1.47059%; text-align: right; }
+.bonusHeader .subtitle img { display: inline; }
+.bonusHeader footer p, .bonusHeader footer span { font-size: 16px; line-height: 25px; padding-bottom: 10px; font-weight: bolder; }
+
+.honeyW strong { font-size: 16px; line-height: 20px; color: #dc3b31; }
+
+.th_tour > ul > li { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; border: 4px solid #c8e02a; border-right-width: 25px; background-color: #fff; padding: 5px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin-bottom: 10px; position: relative; }
+.th_tour > ul > li:before, .th_tour > ul > li:after { content: ""; display: block; width: 100%; height: 2px; background-color: #fff; position: absolute; left: 0px; }
+.th_tour > ul > li:before { top: -2px; }
+.th_tour > ul > li:after { bottom: -2px; }
+.th_tour > ul > li:hover:before, .th_tour > ul > li:hover:after { display: none; }
+
+.md_tour { display: block; margin-bottom: 10px; position: relative; text-decoration: none; }
+.md_tour:before, .md_tour:after { content: ""; display: block; width: 0; height: 0; border-style: solid; border-width: 12px 0 12px 14px; position: absolute; top: 80px; }
+.md_tour:before { border-color: transparent transparent transparent #fff; right: -25px; }
+.md_tour:after { border-color: transparent transparent transparent #c8e02a; right: -20px; }
+.md_tour header { width: 29.16667%; float: left; }
+.md_tour header img { max-width: 100%; }
+.md_tour footer { width: 20.83333%; float: left; font-size: 14px; line-height: 20px; color: #333; text-align: center; margin-top: 5px; }
+.md_tour footer strong { font-size: 28px; line-height: 30px; color: #dc3b31; font-weight: bolder; }
+.md_tour > div { width: 50%; float: left; padding-top: 5px; }
+.md_tour > div h3 { font-size: 18px; line-height: 25px; margin-bottom: 5px; }
+.md_tour > div h6 { font-size: 14px; line-height: 20px; color: #d40c52; }
+.md_tour > div li { font-size: 12px; line-height: 20px; color: #666; }
+
+@media (min-width: 0px) { html, body { min-width: 320px; } }
+@media (max-width: 980px) { .header_content { text-align: right; width: 31.25%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; padding-left: 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  .header_CT { width: 64.58333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .header_CT footer h6 { width: 25%; float: left; }
+  .header_CT footer > div { width: 71.875%; float: left; margin-left: 1.5625%; margin-right: 1.5625%; }
+  .bonusHeader .subtitle { text-align: center; }
+  .bonusHeader footer p { text-align: center; line-height: 30px; padding-bottom: 10px; }
+  .bonusHeader footer span { display: block; padding-bottom: 0; }
+  .bonusHeader .honeyW { text-align: left; }
+  .bonusHeader .honeyW strong { display: block; }
+  .th_tour > ul > li { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; border: 2px solid #c8e02a; padding: 10px; }
+  .th_tour > ul > li:before, .th_tour > ul > li:after { display: none; }
+  .md_tour:before, .md_tour:after { display: none; }
+  .md_tour:hover:before, .md_tour:hover:after { display: none; }
+  .md_tour header { width: 27.08333%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; text-align: center; }
+  .md_tour header img { display: inline; }
+  .md_tour footer { width: 100%; float: left; background-color: #c8e02a; padding: 5px 0; }
+  .md_tour > div { width: 70.83333%; float: left; }
+  .tour_CT:before, .tour_CT:after { display: none; }
+  .tour_CT h6 { font-size: 18px; line-height: 30px; }
+  .tour_CT li { font-size: 14px; line-height: 20px; } }
+@media (max-width: 720px) { .header_content { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; text-align: center; }
+  .header_CT { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .header_CT header { width: 89.58333%; float: left; margin-left: 5.20833%; margin-right: -100%; margin-right: auto; padding-bottom: 0; margin-bottom: 10px; }
+  .header_CT h2 { width: 89.58333%; float: left; margin-left: 5.20833%; margin-right: -100%; padding: 0; margin-right: auto; text-align: center; }
+  .header_CT h2 img { display: inline; }
+  .header_CT footer { display: none; }
+  .md_tour header { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; }
+  .md_tour > div { width: 97.91667%; float: left; margin-left: 1.04167%; margin-right: 1.04167%; } }
+
+/*# sourceMappingURL=tour.css.map */
